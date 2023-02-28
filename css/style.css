@@ -374,11 +374,11 @@ section.contact .input-wrap-2{
 }
 .projects_card_odd{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .projects_card_even{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .project_img{
