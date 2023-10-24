@@ -85,7 +85,7 @@ header nav .left a:hover{
 header nav .left a{
     color:var(--pure);
     text-decoration: none;
-    margin-right:2rem;
+    margin-right:1rem;
     text-transform: uppercase;
     transition:all .3s ease;
 }
