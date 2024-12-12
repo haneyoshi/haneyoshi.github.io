@@ -706,6 +706,23 @@ footer .copyright{
     font-size: 2rem;
     display: flex;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
 /* @media(max-width:1024px){
     .container{
         max-width: 1024px;
