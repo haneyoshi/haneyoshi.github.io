@@ -13,6 +13,7 @@
     --dark-blue:#2F3C7E;
     --darkred: rgb(60, 24, 24);
     --warmtune: #FC766AFF;
+    --lightgreen:#C3E6C3;
 }
 body{
     font-family: 'Poppins',sans-serif;
@@ -386,6 +387,28 @@ section.contact .input-wrap-2{
     box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
     border-radius: 10px;
 }
+
+.project-screenshot {
+    width: 65%; /* Shrinks the image to 60% of its original size */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Ensures proper centering */
+    border-radius: 5px; /* Optional: Adds subtle rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow for better visual appeal */
+}
+
+.screenshot-container {
+    margin-bottom: 2rem; /* Add spacing below the screenshot */
+}
+
+h2 {
+    margin-top: 2rem; /* Ensure spacing above all headings */
+}
+
+/* Optional: Specific margin for Future Enhancements */
+h2 + p {
+    margin-top: 1.5rem; /* Add extra spacing above the paragraph following the heading */
+}
+
 .project_description{
     margin-top: 20px;
     margin-left: 30px;
@@ -395,6 +418,10 @@ section.contact .input-wrap-2{
 }
 .project_description p{
     color: var(--ternary);
+    padding: 10px;
+ }
+ .project_description li{
+    color: var(--lightgreen);
     padding: 10px;
  }
  .project_description button{
@@ -443,6 +470,18 @@ section.contact .input-wrap-2{
 
 #skills .card-wrapper .card:hover h2 ,#skills .card-wrapper .card:hover h2{
     color: var(--light);
+}
+
+ul {
+    margin-bottom: 1.5rem; /* Adds spacing after the list */
+}
+
+ul li {
+    margin-bottom: 0.5rem; /* Optional: Adds spacing between list items */
+}
+
+p + ul {
+    margin-top: 1.5rem; /* Adds spacing before the list, if needed */
 }
 
 
