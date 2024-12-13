@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCheck Introduction</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="site-main-wrapper">
+        <header>
+            <div id="topbar">
+                <nav id="main-nav" class="flex items-center justify-between">
+                    <div class="left flex items-center">
+                        <div class="branding">
+                            <img src="" alt="" height="125" width="100">
+                        </div>
+
+                        <div>
+                            <a href="#project-intro">Project Intro</a>
+                            <a href="#functionalities">Functionalities</a>
+                            <a href="#demo">Demo</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="btn btn-secondary" onclick="location.href='index.html'">
+                            Back to Portfolio
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Project Intro Section -->
+        <section id="project-intro" class="odd">
+            <div class="container">
+                <h1 class="section-heading-white">MediCheck - Project Introduction</h1>
+                <p>This program is designed to streamline the diagnostic and documentation process for medical professionals. It replaces traditional, manual methods of patient data handling with an intuitive interface that offers real-time suggestions and structured data management. The system empowers users to make more informed decisions by identifying patterns and connections in medical data that are difficult to discern on paper. Its features enable seamless tasks like patient check-in, registration, and documentation while offering advanced functionality for decision support. This combination of simplicity and accuracy enhances efficiency in clinical workflows.
+                </p>
+                <h3>Program Features
+                </h3>
+                <p>The program introduces three key features to assist medical professionals in their workflow:
+
+                    Real-Time Symptom Suggestions: As users input symptoms, the system dynamically suggests the most likely co-occurring symptoms, narrowing down possibilities to assist in forming a comprehensive diagnostic picture.
+                    Disease Prediction: Based on the input symptoms, the program identifies the most likely diseases, offering data-driven insights to support diagnosis.
+                    Medicine Recommendation: By analyzing both the symptoms and likely diagnoses, the system suggests the most relevant medicines, balancing symptom relief and disease treatment.
+                    These features adopt a methodical approach designed to provide more comprehensive and realistic suggestions, handling edge cases such as overlapping symptoms and diseases. The result is a tool capable of delivering high accuracy and relevance with minimal input.
+                </p>
+                <h3>Motivation and Learning</h3>
+                <p>My motivation for developing this program stems from a desire to apply computer science to solve practical, real-world problems. Unlike many students who focus on game or web development, I wanted to build something directly connected to everyday life. Medical software, while abundant and highly advanced, inspired me to create my own system from scratch to deepen my understanding and learn new technologies.
+                </p>
+                <h3>Through this project, I learned how to:</h3>
+                <p>Conceptualize and plan a practical project from idea to implementation.
+                    Analyze use cases to ensure the program addresses real-world needs.
+                    Define efficient data structures and algorithms to manage complex medical workflows.
+                    Integrate a program with a database server for dynamic, data-driven functionality.
+                    This hands-on experience gave me invaluable insights into the lifecycle of a software project, reinforcing my ability to translate ideas into actionable solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Functionalities Section -->
+        <section id="functionalities" class="even">
+            <div class="container">
+                <h1 class="section-heading">Functionalities</h1>
+                <p>
+                    MediCheck offers the following core functionalities:
+                </p>
+                <ul>
+                    <li>Real-time symptom input and co-occurrence suggestions.</li>
+                    <li>Recommendations for potential diagnoses based on historical data.</li>
+                    <li>Automated prescription suggestions tailored to symptoms.</li>
+                    <li>Interactive and secure database for storing patient records.</li>
+                </ul>
+                <div class="screenshot-container">
+                    <img src="./images/Medi_main_window.png" alt="Main Window" class="project-screenshot">
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="odd">
+            <div class="container">
+                <h1 class="section-heading-white">Demo</h1>
+                <p>Watch a short demonstration of MediCheck in action below:</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="./videos/mediCheckDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Explore more details in the <a href="https://github.com/haneyoshi/MediCheck" class="btn btn-secondary">GitHub Repository</a>.</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
