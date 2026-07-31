@@ -99,6 +99,8 @@ The initial Astro technical foundation has been reviewed, committed as `fb591dd`
 
 The Astro GitHub Pages deployment workflow has been prepared and reviewed in commit `b04cf12` (`ci: prepare Astro Pages deployment`). Draft pull request `#1` now contains the Astro technical foundation, the planning updates, and the GitHub Pages deployment migration.
 
+Pull request `#1` was merged into `main`. GitHub Actions run `30671574589` succeeded: the build job passed, the deploy job passed, and the `github-pages` artifact was created. The live site at `https://haneyoshi.github.io/` was manually verified and is serving the temporary Astro portfolio page.
+
 ## Phased roadmap
 
 ### Phase 0 — Research and inventory
@@ -144,7 +146,7 @@ The Astro GitHub Pages deployment workflow has been prepared and reviewed in com
 - [x] Add Astro and TypeScript checking
 - [ ] Add linting and formatting when justified by the project needs
 - [x] Confirm local checks and production build
-- [ ] Migrate GitHub Pages deployment to the Astro `dist/` build
+- [x] Migrate GitHub Pages deployment to the Astro `dist/` build
 
 **Exit condition:** empty site shell builds successfully and the deployment migration is verified.
 
@@ -220,7 +222,8 @@ The Astro GitHub Pages deployment workflow has been prepared and reviewed in com
 - **2026-07-31:** Keep React, Tailwind CSS, animation libraries, and unnecessary dependencies out of the initial foundation.
 - **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
 - **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
+- **2026-07-31:** Astro's generated `dist/` output is now the production GitHub Pages source, the legacy root files remain preserved in the repository, and Phase 3 deployment verification is complete.
 
 ## Current focus
 
-**Phase 3: Final review of draft pull request #1 before merging and verifying the Astro deployment in production.**
+**Phase 1: Finalize the target audience and draft the portfolio’s core content before visual implementation.**
