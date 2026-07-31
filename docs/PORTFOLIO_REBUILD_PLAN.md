@@ -97,6 +97,8 @@ The rebuild is occurring on `feature/portfolio-rebuild`. The legacy root site an
 
 The initial Astro technical foundation has been reviewed, committed as `fb591dd`, pushed to `origin/feature/portfolio-rebuild`, and opened as draft pull request `#1`.
 
+The Astro GitHub Pages deployment workflow has been prepared and reviewed in commit `b04cf12` (`ci: prepare Astro Pages deployment`). Draft pull request `#1` now contains the Astro technical foundation, the planning updates, and the GitHub Pages deployment migration.
+
 ## Phased roadmap
 
 ### Phase 0 — Research and inventory
@@ -217,7 +219,8 @@ The initial Astro technical foundation has been reviewed, committed as `fb591dd`
 - **2026-07-31:** Build and verify the Astro foundation on `feature/portfolio-rebuild` before changing the legacy root site or deployment workflow.
 - **2026-07-31:** Keep React, Tailwind CSS, animation libraries, and unnecessary dependencies out of the initial foundation.
 - **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
+- **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
 
 ## Current focus
 
-**Phase 3: Prepare and review the dedicated GitHub Pages deployment migration for the Astro `dist/` build.**
+**Phase 3: Final review of draft pull request #1 before merging and verifying the Astro deployment in production.**
