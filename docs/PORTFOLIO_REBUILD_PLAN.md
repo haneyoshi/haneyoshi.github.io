@@ -14,6 +14,15 @@ The portfolio should demonstrate:
 - maintainable code organization
 - honest professional positioning
 - one memorable interactive feature
+### EchoTask
+
+EchoTask is an active full-stack MVP exploring how a caretaking operations team could coordinate attendance, work locations, and supply requests through a shared web application.
+
+I am developing the project with React, Flask, SQLAlchemy, and SQLite. The current implementation includes a relational data model for buildings, work areas, users, attendance, snow logs, and supply requests, along with selected Flask API routes and a React prototype for searching supplies, selecting quantities, and reviewing a request summary.
+
+The project grew from analyzing operational workflows and determining how information should be structured, stored, and accessed across different user roles. My current focus is completing one reliable end-to-end supply-request workflow, improving API consistency, and connecting the frontend to persistent backend data.
+
+**Status:** Active MVP and work in progress.
 
 ## Current positioning
 
@@ -200,6 +209,11 @@ GitHub Pages deployment constraints must be considered before choosing Next.js f
 - **2026-07-31:** Use `WebAppMVP` as the secondary featured project.
 - **2026-07-31:** Do not feature individual school assignments in the main project section.
 - **2026-07-31:** Keep the project architecture flexible so future projects can be added easily.
+- **2026-07-31:** `WebAppMVP`, presented publicly as EchoTask, will be the secondary featured project.
+- **2026-07-31:** EchoTask will be labeled as an active full-stack MVP and work in progress.
+- **2026-07-31:** EchoTask’s strongest portfolio angle is translating operational workflows into a relational data model and React/Flask application.
+- **2026-07-31:** Academic coursework projects will not appear in the main project section.
+- **2026-07-31:** EchoTask will not be promoted prominently until one complete frontend-to-backend workflow works reliably and security/privacy issues are addressed.
 ## Current focus
 
 **Phase 0: Deep audit of `SarriaXD/blog_site`, followed by an audit of the current portfolio repository.**
