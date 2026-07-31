@@ -95,6 +95,8 @@ React, Tailwind CSS, animation libraries, and other unnecessary dependencies are
 
 The rebuild is occurring on `feature/portfolio-rebuild`. The legacy root site and existing deployment workflow remain unchanged until the Astro build is verified. The generated `dist/` directory is not deployed yet.
 
+The initial Astro technical foundation has been reviewed, committed as `fb591dd`, pushed to `origin/feature/portfolio-rebuild`, and opened as draft pull request `#1`.
+
 ## Phased roadmap
 
 ### Phase 0 — Research and inventory
@@ -214,7 +216,8 @@ The rebuild is occurring on `feature/portfolio-rebuild`. The legacy root site an
 - **2026-07-31:** Use Astro with TypeScript for the rebuild and continue static hosting through GitHub Pages.
 - **2026-07-31:** Build and verify the Astro foundation on `feature/portfolio-rebuild` before changing the legacy root site or deployment workflow.
 - **2026-07-31:** Keep React, Tailwind CSS, animation libraries, and unnecessary dependencies out of the initial foundation.
+- **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
 
 ## Current focus
 
-**Phase 3: Verify and review the Astro technical foundation before deployment migration.**
+**Phase 3: Prepare and review the dedicated GitHub Pages deployment migration for the Astro `dist/` build.**
