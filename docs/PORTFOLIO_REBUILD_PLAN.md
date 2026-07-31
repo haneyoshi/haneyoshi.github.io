@@ -67,7 +67,7 @@ Visible source repository currently associated with that site: `SarriaXD/blog_si
 
 **Working positioning statement:**
 
-> A software developer with computer science and electrical engineering training who applies structured problem-solving, technical troubleshooting, and practical software development to real projects.
+> A software developer with computer science and electrical engineering training who brings structured problem-solving and technical troubleshooting to practical software projects.
 
 This will be refined after the content inventory.
 
@@ -82,32 +82,28 @@ This will be refined after the content inventory.
 - [ ] Signature interactive feature
 - [ ] Resume and contact section
 
-## Technical direction — provisional
+## Technical direction — selected
 
-Do not finalize until the current repository audit is complete.
-
-Likely target:
-
-- React or Next.js
-- TypeScript
+- Astro with TypeScript
 - component-based architecture
-- responsive CSS or Tailwind CSS
-- Framer Motion or lighter motion utilities
+- responsive CSS
 - accessible reduced-motion behavior
 - optimized images
-- automated deployment
+- static hosting through GitHub Pages
 
-GitHub Pages deployment constraints must be considered before choosing Next.js features. Static export may be required unless deployment moves to another host.
+React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
+
+The rebuild is occurring on `feature/portfolio-rebuild`. The legacy root site and existing deployment workflow remain unchanged until the Astro build is verified. The generated `dist/` directory is not deployed yet.
 
 ## Phased roadmap
 
 ### Phase 0 — Research and inventory
 
-- [ ] Complete deep audit of `SarriaXD/blog_site`
-- [ ] Audit the current `haneyoshi.github.io` repository
-- [ ] Inventory current job experience, education, projects, assets, and resume
-- [ ] Identify what can be reused
-- [ ] Decide whether to refactor or rebuild
+- [x] Complete deep audit of `SarriaXD/blog_site`
+- [x] Audit the current `haneyoshi.github.io` repository
+- [x] Inventory current job experience, education, projects, assets, and resume
+- [x] Identify what can be reused
+- [x] Decide whether to refactor or rebuild
 
 **Exit condition:** architecture choice, content inventory, and scope are approved.
 
@@ -137,15 +133,16 @@ GitHub Pages deployment constraints must be considered before choosing Next.js f
 
 ### Phase 3 — Technical foundation
 
-- [ ] Create a feature branch
-- [ ] Establish project framework and build tooling
-- [ ] Create reusable layout and UI primitives
-- [ ] Set up content/data files
-- [ ] Add linting, formatting, and type checking
-- [ ] Confirm local and production builds
-- [ ] Confirm GitHub Pages or alternative deployment
+- [x] Create the `feature/portfolio-rebuild` branch
+- [x] Establish Astro with TypeScript and build tooling
+- [x] Create initial reusable layout and UI primitives
+- [x] Set up the initial content/data structure
+- [x] Add Astro and TypeScript checking
+- [ ] Add linting and formatting when justified by the project needs
+- [x] Confirm local checks and production build
+- [ ] Migrate GitHub Pages deployment to the Astro `dist/` build
 
-**Exit condition:** empty site shell builds and deploys successfully.
+**Exit condition:** empty site shell builds successfully and the deployment migration is verified.
 
 ### Phase 4 — Core implementation
 
@@ -214,6 +211,10 @@ GitHub Pages deployment constraints must be considered before choosing Next.js f
 - **2026-07-31:** EchoTask’s strongest portfolio angle is translating operational workflows into a relational data model and React/Flask application.
 - **2026-07-31:** Academic coursework projects will not appear in the main project section.
 - **2026-07-31:** EchoTask will not be promoted prominently until one complete frontend-to-backend workflow works reliably and security/privacy issues are addressed.
+- **2026-07-31:** Use Astro with TypeScript for the rebuild and continue static hosting through GitHub Pages.
+- **2026-07-31:** Build and verify the Astro foundation on `feature/portfolio-rebuild` before changing the legacy root site or deployment workflow.
+- **2026-07-31:** Keep React, Tailwind CSS, animation libraries, and unnecessary dependencies out of the initial foundation.
+
 ## Current focus
 
-**Phase 0: Deep audit of `SarriaXD/blog_site`, followed by an audit of the current portfolio repository.**
+**Phase 3: Verify and review the Astro technical foundation before deployment migration.**
