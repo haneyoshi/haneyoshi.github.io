@@ -197,7 +197,9 @@ GitHub Pages deployment constraints must be considered before choosing Next.js f
 - **2026-07-30:** Prioritize depth of evidence over number of projects.
 - **2026-07-30:** Use this repository document as the living source of truth.
 - **2026-07-30:** Do not change production code until reference and current-repository audits are complete.
-
+- **2026-07-31:** Use `WebAppMVP` as the secondary featured project.
+- **2026-07-31:** Do not feature individual school assignments in the main project section.
+- **2026-07-31:** Keep the project architecture flexible so future projects can be added easily.
 ## Current focus
 
 **Phase 0: Deep audit of `SarriaXD/blog_site`, followed by an audit of the current portfolio repository.**
