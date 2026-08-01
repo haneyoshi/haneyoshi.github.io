@@ -1,6 +1,6 @@
 # Portfolio Rebuild Master Plan
 
-`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, roadmap, decisions, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference. `docs/PORTFOLIO_DESIGN_SYSTEM.md` is the approved Version 1 typography and spacing reference.
+`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, roadmap, decisions, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference. `docs/PORTFOLIO_DESIGN_SYSTEM.md` is the approved Version 1 typography and spacing reference. `docs/PORTFOLIO_COLOR_SYSTEM.md` is the approved Version 1 color-system reference.
 
 ## Project goal
 
@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-Current design-system work is occurring on `feature/portfolio-typography-spacing`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
+Current design-system work is occurring on `feature/portfolio-color-system`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
 
 ## Phased roadmap
 
@@ -95,7 +95,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - [x] Create page wireframe
 - [x] Define typography scale
 - [x] Define spacing system
-- [ ] Define color system
+- [x] Define color system
 - [ ] Define card, button, section, and navigation patterns
 - [ ] Choose animation principles
 - [ ] Design mobile-first layouts
@@ -141,6 +141,32 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - Give MediCheck more generous evidence spacing while keeping EchoTask compact, polished, and readable.
 - Restrict one-off values to documented accessibility, media, or optical needs.
 - Preserve logical DOM order and mobile-first spacing behavior.
+
+#### Approved Version 1 color decisions
+
+- Use light mode only for Version 1; defer dark mode and a dark-mode toggle.
+- Use a warm-neutral foundation with charcoal-blue text, one deep-blue primary accent, and no second strong decorative accent. Reserve warm orange for keyboard focus only.
+- Keep page backgrounds mostly continuous with selective quiet surfaces. Do not require gradients or full application-style status palettes without a real requirement.
+- Use semantic color tokens rather than repeated raw values. Color must not be the only indicator of state, project maturity, selection, or action.
+- Give MediCheck stronger evidence emphasis. Keep EchoTask quieter and do not use warning colors for its unfinished status.
+
+| Core role | Approved value |
+| --- | --- |
+| Page background | `#F7F5F1` |
+| Primary surface | `#FCFBF8` |
+| Secondary surface | `#EFEEE9` |
+| Primary text | `#18212B` |
+| Secondary text | `#3F4B57` |
+| Muted text | `#596673` |
+| Primary accent / link | `#1F5F8B` |
+| Accent hover | `#174B70` |
+| Accent active | `#103A58` |
+| Accent-soft background | `#E4EEF5` |
+| Focus indicator | `#A33A00` |
+| Subtle border | `#D6D3CC` |
+| Strong border | `#7A8692` |
+
+Normal text requires at least `4.5:1` contrast; large text and meaningful interface or graphic boundaries require at least `3:1`. Inline links remain identifiable without color alone, focus-visible remains distinct on every approved surface, and project maturity remains explicit text. `color-border-strong` meets at least `3:1` against every approved surface. Revalidate all contrast during implementation.
 
 **Implementation note:** The provisional Inter-first source token must be reconciled to the approved system-font stack during implementation. Do not download font files merely to preserve the provisional Inter reference.
 
@@ -233,7 +259,8 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
 - **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
 - **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
+- **2026-08-01:** Approve the Version 1 color system: use a light-mode-only warm-neutral palette, deep-blue accent, warm-orange focus indicator, semantic tokens, and accessible contrast requirements; define card, button, section, and navigation patterns next.
 
 ## Current focus
 
-**Phase 2: The page wireframe, typography system, and spacing system are approved. Next, define the Version 1 color system.**
+**Phase 2: The page wireframe, typography, spacing, and color systems are approved. Next, define card, button, section, and navigation patterns.**
