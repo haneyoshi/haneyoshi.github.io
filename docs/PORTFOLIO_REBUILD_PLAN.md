@@ -185,7 +185,7 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 
 ### Phase 4 — Core implementation
 
-- [ ] Navigation and hero
+- [x] Navigation and hero
 - [ ] About section
 - [ ] MediCheck case study
 - [ ] Secondary project section
@@ -263,7 +263,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve the Version 1 component-pattern specification: use content-led project, entry, skill-evidence, action, section, and progressively enhanced navigation patterns with explicit responsive, interaction-state, and accessibility requirements; choose animation principles next.
 - **2026-08-01:** Approve the Version 1 animation principles: keep motion restrained, content-supporting, progressively enhanced, performance-aware, and fully usable with reduced motion; design mobile-first layouts next.
 - **2026-08-01:** Approve the Version 1 mobile-first layouts: use a content-driven one-column baseline, preserve DOM order, introduce columns only when useful, keep MediCheck dominant and EchoTask compact, and retain responsive accessibility without adding dependencies.
+- **2026-08-01:** Implement and manually review the Version 1 navigation and hero across mobile-emulated, tablet, desktop, keyboard-focus, and zoom conditions. The implementation uses ordinary anchor navigation in an always-visible wrapping layout, with no disclosure menu and a non-sticky header; preserves the approved hero content and action order; reconciles the approved warm-neutral, deep-blue, system-font, spacing, and focus tokens; and adds no JavaScript or new dependencies.
 
 ## Current focus
 
-**Phase 2 is complete. Next, prepare the first focused Phase 4 implementation task: navigation and hero.**
+**Phase 4 is in progress. Next, prepare the About section implementation.**

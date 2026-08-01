@@ -1,13 +1,16 @@
 ---
 const navigation = [
-  { href: '#main-content', label: 'Home' },
-  { href: '#rebuild-status', label: 'Status' },
+  { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
 ];
 ---
 
-<header class="site-header">
+<header id="top" class="site-header">
   <div class="container header-inner">
-    <a class="site-name" href="/" aria-label="YuShan Hung, home">YuShan Hung</a>
+    <a class="site-name" href="#top" aria-label="YuShan, back to top">YuShan</a>
     <nav aria-label="Primary navigation">
       <ul class="navigation">
         {navigation.map((item) => (
@@ -25,32 +28,60 @@ const navigation = [
 
   .header-inner {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    min-height: 4.5rem;
+    gap: var(--space-xs) var(--space-xl);
+    padding-block: var(--space-sm);
   }
 
   .site-name {
     color: var(--color-text);
     font-weight: 700;
     text-decoration: none;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
   }
+
+  nav { flex: 1 1 30rem; }
 
   .navigation {
     display: flex;
-    gap: var(--space-4);
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
   .navigation a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
     color: var(--color-text-muted);
+    font-weight: 500;
+    text-decoration-thickness: 1px;
+    text-decoration-color: transparent;
   }
 
   .navigation a:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-hover);
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
   }
-}
+
+  .navigation a:active {
+    color: var(--color-accent-active);
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 48rem) {
+    .header-inner {
+      justify-content: space-between;
+    }
+
+    nav {
+      flex: 0 1 auto;
+    }
+  }
 </style>
