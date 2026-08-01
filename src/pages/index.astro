@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import mediCheckImage from '../../images/Medi_main_window.png';
 ---
 
 <BaseLayout
@@ -43,6 +45,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
       </div>
     </div>
+  </section>
+
+  <section id="projects" class="projects container" aria-labelledby="projects-title">
+    <div class="projects-heading">
+      <h2 id="projects-title">Projects</h2>
+      <p class="projects-introduction">
+        These projects show how I approach software development through practical problem
+        definition, structured data, interface design, and iterative implementation. Each project
+        is presented according to its current scope and maturity, without overstating completion or
+        real-world use.
+      </p>
+    </div>
+
+    <article id="medicheck" class="medicheck" aria-labelledby="medicheck-title">
+      <header class="medicheck-header">
+        <h3 id="medicheck-title">MediCheck</h3>
+        <p class="project-metadata">
+          Educational desktop software prototype <span aria-hidden="true">·</span> Solo project
+          <span aria-hidden="true">·</span> 2024
+        </p>
+      </header>
+
+      <div class="medicheck-summary">
+        <p>
+          MediCheck is a solo Python and MySQL desktop application created in 2024 as an educational
+          software prototype focused on clinic workflow management, relational database design, and
+          SQL-based information retrieval across related historical records.
+        </p>
+        <p class="project-technology"><strong>Technology:</strong> Python, MySQL</p>
+      </div>
+
+      <figure class="medicheck-figure">
+        <Image
+          src={mediCheckImage}
+          alt="MediCheck desktop prototype showing a Patient ID field and controls for check-in, queue review, visit history, and patient profile retrieval."
+          width={700}
+          height={700}
+          sizes="(max-width: 48rem) calc(100vw - 2rem), 700px"
+          format="png"
+        />
+        <figcaption>
+          MediCheck’s desktop interface groups patient check-in, queue, visit-history, and
+          profile-retrieval workflows in one prototype window.
+        </figcaption>
+      </figure>
+
+      <div class="medicheck-details">
+        <section aria-labelledby="medicheck-approach-title">
+          <h4 id="medicheck-approach-title">Problem and approach</h4>
+          <p>
+            The project’s main technical challenge was translating connected historical patient,
+            symptom, diagnosis, and medication information into a structured relational model and
+            usable desktop workflows for storing, retrieving, and reviewing that information.
+          </p>
+        </section>
+
+        <section aria-labelledby="medicheck-data-title">
+          <h4 id="medicheck-data-title">Relational data and SQL</h4>
+          <p>
+            I worked across the Python application logic, desktop interface, MySQL schema, database
+            connection, sample-data generation, and SQL queries across related records.
+          </p>
+        </section>
+      </div>
+
+      <a class="action action-primary medicheck-action" href="https://github.com/haneyoshi/MediCheck">
+        View MediCheck on GitHub
+      </a>
+    </article>
   </section>
 </BaseLayout>
 
@@ -90,6 +161,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .about-supporting p + p {
     margin-top: var(--space-md);
+  }
+
+  .projects {
+    padding-bottom: var(--space-section);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .projects-heading {
+    max-width: 52ch;
+  }
+
+  .projects h2,
+  .projects h3,
+  .projects h4 {
+    margin: 0;
+  }
+
+  .projects h2 {
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .projects-introduction {
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: 1.55;
+  }
+
+  .medicheck {
+    margin-top: var(--space-2xl);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .medicheck-header,
+  .medicheck-summary,
+  .medicheck-details {
+    max-width: 68ch;
+  }
+
+  .medicheck h3 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  .project-metadata {
+    margin: var(--space-sm) 0 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .project-metadata span {
+    margin-inline: var(--space-2xs);
+  }
+
+  .medicheck-summary {
+    margin-top: var(--space-xl);
+    color: var(--color-text-secondary);
+  }
+
+  .medicheck-summary p {
+    margin: 0;
+  }
+
+  .project-technology {
+    margin-top: var(--space-md) !important;
+    color: var(--color-text);
+  }
+
+  .medicheck-figure {
+    max-width: 43.75rem;
+    margin: var(--space-2xl) 0 0;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  .medicheck-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .medicheck-figure figcaption {
+    margin-top: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
+  }
+
+  .medicheck-details {
+    margin-top: var(--space-2xl);
+  }
+
+  .medicheck-details section + section {
+    margin-top: var(--space-xl);
+  }
+
+  .medicheck-details h4 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .medicheck-details p {
+    margin: var(--space-md) 0 0;
+    color: var(--color-text-secondary);
+  }
+
+  .medicheck-action {
+    margin-top: var(--space-2xl);
   }
 
   .eyebrow {
