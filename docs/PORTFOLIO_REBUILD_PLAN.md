@@ -1,6 +1,6 @@
 # Portfolio Rebuild Master Plan
 
-`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, roadmap, decisions, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference. `docs/PORTFOLIO_DESIGN_SYSTEM.md` is the approved Version 1 typography and spacing reference. `docs/PORTFOLIO_COLOR_SYSTEM.md` is the approved Version 1 color-system reference.
+`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, roadmap, decisions, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference. `docs/PORTFOLIO_DESIGN_SYSTEM.md` is the approved Version 1 typography and spacing reference. `docs/PORTFOLIO_COLOR_SYSTEM.md` is the approved Version 1 color-system reference. `docs/PORTFOLIO_COMPONENT_PATTERNS.md` is the approved Version 1 component-pattern reference. `docs/PORTFOLIO_ANIMATION_PRINCIPLES.md` is the approved Version 1 animation-principles reference.
 
 ## Project goal
 
@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-Current design-system work is occurring on `feature/portfolio-component-patterns`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
+Current design-system work is occurring on `feature/portfolio-animation-principles`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
 
 ## Phased roadmap
 
@@ -97,7 +97,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - [x] Define spacing system
 - [x] Define color system
 - [x] Define card, button, section, and navigation patterns
-- [ ] Choose animation principles
+- [x] Choose animation principles
 - [ ] Design mobile-first layouts
 
 **Exit condition:** every section has a clear purpose and approved layout.
@@ -261,7 +261,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
 - **2026-08-01:** Approve the Version 1 color system: use a light-mode-only warm-neutral palette, deep-blue accent, warm-orange focus indicator, semantic tokens, and accessible contrast requirements; define card, button, section, and navigation patterns next.
 - **2026-08-01:** Approve the Version 1 component-pattern specification: use content-led project, entry, skill-evidence, action, section, and progressively enhanced navigation patterns with explicit responsive, interaction-state, and accessibility requirements; choose animation principles next.
+- **2026-08-01:** Approve the Version 1 animation principles: keep motion restrained, content-supporting, progressively enhanced, performance-aware, and fully usable with reduced motion; design mobile-first layouts next.
 
 ## Current focus
 
-**Phase 2: The page wireframe, typography, spacing, color, and component-pattern systems are approved. Next, choose animation principles.**
+**Phase 2: The page wireframe, typography, spacing, color, component-pattern, and animation-principles systems are approved. Next, design mobile-first layouts.**
