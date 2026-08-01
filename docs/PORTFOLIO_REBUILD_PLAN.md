@@ -1,8 +1,6 @@
 # Portfolio Rebuild Master Plan
 
-This document remains authoritative for the portfolio's project status, roadmap, decisions, architecture, restrictions, and current focus. Update it whenever we make a major design, content, architecture, or scope decision.
-
-`docs/PORTFOLIO_CONTENT.md` is the editable editorial source and is authoritative for the current Version 1 public website copy. The copy may be revised as the layout, projects, résumé, and professional experience develop, while this rebuild plan continues to govern the broader project direction and constraints.
+`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, decisions, roadmap, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference.
 
 ## Project goal
 
@@ -16,28 +14,12 @@ The portfolio should demonstrate:
 - maintainable code organization
 - honest professional positioning
 - one memorable interactive feature
-### EchoTask
-
-EchoTask is an active full-stack MVP exploring how a caretaking operations team could coordinate attendance, work locations, and supply requests through a shared web application.
-
-I am developing the project with React, Flask, SQLAlchemy, and SQLite. The current implementation includes a relational data model for buildings, work areas, users, attendance, snow logs, and supply requests, along with selected Flask API routes and a React prototype for searching supplies, selecting quantities, and reviewing a request summary.
-
-The project grew from analyzing operational workflows and determining how information should be structured, stored, and accessed across different user roles. My current focus is completing one reliable end-to-end supply-request workflow, improving API consistency, and connecting the frontend to persistent backend data.
-
-**Status:** Active MVP and work in progress.
 
 ## Current positioning
 
-YuShan currently has:
+YuShan is positioned as a software developer with experience in IT operations, data reporting, workflow analysis, automation, and technical problem-solving. The portfolio supports software development, full-stack development, application support, systems analysis, technical analyst roles, and related technical work without positioning YuShan exclusively as a frontend developer.
 
-- computer science education
-- electrical engineering background
-- a current technical role
-- one substantial project: MediCheck
-- one smaller or incomplete project
-- an existing GitHub Pages portfolio
-
-The strategy is **depth over volume**. MediCheck will become a detailed case study, and the portfolio rebuild itself will become evidence of frontend ability.
+The strategy is **depth over volume**. MediCheck is the dominant case study, EchoTask is a secondary development preview whose active implementation is temporarily paused while the portfolio rebuild is the priority, and the portfolio rebuild itself provides evidence of frontend ability.
 
 ## Reference site
 
@@ -65,24 +47,9 @@ Visible source repository currently associated with that site: `SarriaXD/blog_si
 - source code
 - the number or breadth of technologies presented
 
-## Proposed portfolio direction
+## Approved site structure
 
-**Working positioning statement:**
-
-> A software developer with computer science and electrical engineering training who brings structured problem-solving and technical troubleshooting to practical software projects.
-
-This will be refined after the content inventory.
-
-## Proposed site structure
-
-- [ ] Hero: name, role direction, concise value statement, primary actions
-- [ ] About: multidisciplinary background and current development journey
-- [ ] Featured case study: MediCheck
-- [ ] Secondary project or work-in-progress
-- [ ] Experience and education timeline
-- [ ] Skills supported by actual evidence
-- [ ] Signature interactive feature
-- [ ] Resume and contact section
+The approved Version 1 page structure and section hierarchy are defined in `docs/PORTFOLIO_WIREFRAME.md`.
 
 ## Technical direction — selected
 
@@ -95,13 +62,7 @@ This will be refined after the content inventory.
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-The rebuild is occurring on `feature/portfolio-rebuild`. The legacy root site and existing deployment workflow remain unchanged until the Astro build is verified. The generated `dist/` directory is not deployed yet.
-
-The initial Astro technical foundation has been reviewed, committed as `fb591dd`, pushed to `origin/feature/portfolio-rebuild`, and opened as draft pull request `#1`.
-
-The Astro GitHub Pages deployment workflow has been prepared and reviewed in commit `b04cf12` (`ci: prepare Astro Pages deployment`). Draft pull request `#1` now contains the Astro technical foundation, the planning updates, and the GitHub Pages deployment migration.
-
-Pull request `#1` was merged into `main`. GitHub Actions run `30671574589` succeeded: the build job passed, the deploy job passed, and the `github-pages` artifact was created. The live site at `https://haneyoshi.github.io/` was manually verified and is serving the temporary Astro portfolio page.
+Current design-system work is occurring on `feature/portfolio-design-system`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
 
 ## Phased roadmap
 
@@ -131,7 +92,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 
 ### Phase 2 — Information architecture and visual system
 
-- [ ] Create page wireframe
+- [x] Create page wireframe
 - [ ] Define typography scale
 - [ ] Define spacing system
 - [ ] Define color system
@@ -140,6 +101,28 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - [ ] Design mobile-first layouts
 
 **Exit condition:** every section has a clear purpose and approved layout.
+
+#### Approved Version 1 wireframe decisions
+
+- Use one semantic single-page structure in this order:
+  1. Header and navigation
+  2. Hero
+  3. About
+  4. Projects
+     - MediCheck
+     - EchoTask
+  5. Experience and education
+  6. Skills supported by evidence
+  7. Portfolio rebuild statement
+  8. Contact
+  9. Footer
+- Use the primary navigation anchors `#about`, `#projects`, `#experience`, `#skills`, and `#contact`.
+- Give MediCheck, the dominant featured case study, the strongest visual weight.
+- Present EchoTask as the secondary development preview with the temporary label `Interface preview in development.`
+- Use paired Experience and Education blocks rather than a timeline.
+- Organize Skills into four evidence-supported groups without ratings or proficiency claims.
+- Preserve logical DOM order and the approved linear project sequences on mobile.
+- Keep core content accessible without JavaScript and do not hide essential content behind accordions or interactions.
 
 ### Phase 3 — Technical foundation
 
@@ -160,7 +143,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - [ ] About section
 - [ ] MediCheck case study
 - [ ] Secondary project section
-- [ ] Experience and education timeline
+- [ ] Experience and education paired blocks
 - [ ] Skills/evidence section
 - [ ] Contact and footer
 
@@ -228,7 +211,8 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
 - **2026-07-31:** Astro's generated `dist/` output is now the production GitHub Pages source, the legacy root files remain preserved in the repository, and Phase 3 deployment verification is complete.
 - **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
+- **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
 
 ## Current focus
 
-**Phase 2: Define the information architecture and visual system using the approved Version 1 content before implementing the complete page.**
+**Phase 2: The page wireframe and section hierarchy are approved. Next, define the typography and spacing systems.**
