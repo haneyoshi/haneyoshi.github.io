@@ -1,6 +1,8 @@
 # Portfolio Rebuild Master Plan
 
-This document is the **single source of truth** for rebuilding YuShan's portfolio. Update it whenever we make a major design, content, architecture, or scope decision.
+This document remains authoritative for the portfolio's project status, roadmap, decisions, architecture, restrictions, and current focus. Update it whenever we make a major design, content, architecture, or scope decision.
+
+`docs/PORTFOLIO_CONTENT.md` is the editable editorial source and is authoritative for the current Version 1 public website copy. The copy may be revised as the layout, projects, résumé, and professional experience develop, while this rebuild plan continues to govern the broader project direction and constraints.
 
 ## Project goal
 
@@ -115,15 +117,17 @@ Pull request `#1` was merged into `main`. GitHub Actions run `30671574589` succe
 
 ### Phase 1 — Positioning and content
 
-- [ ] Finalize target role and audience
-- [ ] Write hero copy
-- [ ] Write concise personal story
-- [ ] Build MediCheck case-study content
-- [ ] Define secondary-project presentation
-- [ ] Rewrite experience and education descriptions
-- [ ] Select supported skills only
+- [x] Finalize target role and audience
+- [x] Write hero copy
+- [x] Write concise personal story
+- [x] Build MediCheck case-study content
+- [x] Define secondary-project presentation
+- [x] Rewrite experience and education descriptions
+- [x] Select supported skills only
 
 **Exit condition:** all page content exists in draft form before visual implementation.
+
+All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md`.
 
 ### Phase 2 — Information architecture and visual system
 
@@ -223,7 +227,8 @@ Pull request `#1` was merged into `main`. GitHub Actions run `30671574589` succe
 - **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
 - **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
 - **2026-07-31:** Astro's generated `dist/` output is now the production GitHub Pages source, the legacy root files remain preserved in the repository, and Phase 3 deployment verification is complete.
+- **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
 
 ## Current focus
 
-**Phase 1: Finalize the target audience and draft the portfolio’s core content before visual implementation.**
+**Phase 2: Define the information architecture and visual system using the approved Version 1 content before implementing the complete page.**
