@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-Current design-system work is occurring on `feature/portfolio-color-system`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
+Current design-system work is occurring on `feature/portfolio-component-patterns`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
 
 ## Phased roadmap
 
@@ -96,7 +96,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - [x] Define typography scale
 - [x] Define spacing system
 - [x] Define color system
-- [ ] Define card, button, section, and navigation patterns
+- [x] Define card, button, section, and navigation patterns
 - [ ] Choose animation principles
 - [ ] Design mobile-first layouts
 
@@ -260,7 +260,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
 - **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
 - **2026-08-01:** Approve the Version 1 color system: use a light-mode-only warm-neutral palette, deep-blue accent, warm-orange focus indicator, semantic tokens, and accessible contrast requirements; define card, button, section, and navigation patterns next.
+- **2026-08-01:** Approve the Version 1 component-pattern specification: use content-led project, entry, skill-evidence, action, section, and progressively enhanced navigation patterns with explicit responsive, interaction-state, and accessibility requirements; choose animation principles next.
 
 ## Current focus
 
-**Phase 2: The page wireframe, typography, spacing, and color systems are approved. Next, define card, button, section, and navigation patterns.**
+**Phase 2: The page wireframe, typography, spacing, color, and component-pattern systems are approved. Next, choose animation principles.**
