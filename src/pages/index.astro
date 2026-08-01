@@ -3,62 +3,113 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="YuShan Hung | Portfolio Rebuild"
-  description="YuShan Hung's portfolio is being thoughtfully rebuilt."
+  title="YuShan Hung | Software Developer"
+  description="YuShan Hung is a software developer with experience across IT operations, data reporting, workflow analysis, and automation."
 >
-  <section class="intro container" aria-labelledby="page-title">
-    <p class="eyebrow">Portfolio rebuild</p>
-    <h1 id="page-title">A new portfolio is in progress.</h1>
-    <p class="summary">
-      I’m building a clearer, more thoughtful home for my software projects and professional story.
-      This temporary page confirms that the new Astro foundation is up and running.
-    </p>
-  </section>
-
-  <section id="rebuild-status" class="status container" aria-labelledby="status-title">
-    <h2 id="status-title">Foundation status</h2>
-    <p>The structure, accessibility baseline, responsive styles, and production build are being established first.</p>
+  <section class="hero container" aria-labelledby="page-title">
+    <div class="hero-content">
+      <p class="eyebrow">Hello, I'm YuShan.</p>
+      <h1 id="page-title">Software Developer</h1>
+      <p class="hero-summary">
+        I build practical software and approach technical problems with experience spanning IT
+        operations, data reporting, workflow analysis, and automation.
+      </p>
+      <div class="hero-actions" aria-label="Portfolio actions">
+        <a class="action action-primary" href="#projects">View my work</a>
+        <a class="action action-secondary" href="#contact">Contact me</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
-  .intro {
-    display: grid;
-    align-content: center;
-    min-height: min(70vh, 44rem);
-    padding-block: var(--space-8);
+  .hero {
+    padding-block: var(--space-2xl) var(--space-section);
+  }
+
+  .hero-content {
+    max-width: 52ch;
   }
 
   .eyebrow {
-    margin-bottom: var(--space-3);
+    margin: 0 0 var(--space-sm);
     color: var(--color-accent);
-    font-size: var(--font-size-sm);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-weight: 600;
   }
 
   h1 {
-    max-width: 14ch;
     margin: 0;
     font-size: var(--font-size-display);
     line-height: 1.05;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
   }
 
-  .summary {
-    max-width: 42rem;
-    margin-top: var(--space-5);
-    color: var(--color-text-muted);
+  .hero-summary {
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-secondary);
     font-size: var(--font-size-lg);
+    line-height: 1.55;
   }
 
-  .status {
-    padding-block: var(--space-7);
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    margin-top: var(--space-lg);
   }
 
-  .status p {
-    max-width: 42rem;
-    color: var(--color-text-muted);
+  .action {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-lg);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .action-primary {
+    background: var(--color-accent);
+    color: var(--color-surface);
+  }
+
+  .action-primary:hover {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-hover);
+    color: var(--color-surface);
+  }
+
+  .action-primary:active {
+    border-color: var(--color-accent-active);
+    background: var(--color-accent-active);
+    color: var(--color-surface);
+    transform: translateY(1px);
+  }
+
+  .action-secondary {
+    color: var(--color-accent);
+  }
+
+  .action-secondary:hover {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-hover);
+  }
+
+  .action-secondary:active {
+    border-color: var(--color-accent-active);
+    color: var(--color-accent-active);
+    transform: translateY(1px);
+  }
+
+  @media (max-width: 23rem) {
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 </style>

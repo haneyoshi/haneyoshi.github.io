@@ -17,7 +17,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
-  line-height: 1.6;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
 }
 
@@ -41,6 +41,19 @@ a {
   text-underline-offset: 0.2em;
 }
 
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+a:active {
+  color: var(--color-accent-active);
+}
+
+::selection {
+  background: var(--color-selection);
+  color: var(--color-text);
+}
+
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 4px;
@@ -49,12 +62,6 @@ a {
 .container {
   width: min(100% - (2 * var(--container-gutter)), var(--container-width));
   margin-inline: auto;
-}
-
-@media (max-width: 32rem) {
-  :root {
-    --space-8: 3.5rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
