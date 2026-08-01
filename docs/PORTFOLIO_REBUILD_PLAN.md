@@ -1,6 +1,6 @@
 # Portfolio Rebuild Master Plan
 
-`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, decisions, roadmap, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference.
+`docs/PORTFOLIO_REBUILD_PLAN.md` governs project status, roadmap, decisions, architecture, and restrictions. `docs/PORTFOLIO_CONTENT.md` is the authoritative editable public-copy source. `docs/PORTFOLIO_WIREFRAME.md` is the approved page-structure reference. `docs/PORTFOLIO_DESIGN_SYSTEM.md` is the approved Version 1 typography and spacing reference.
 
 ## Project goal
 
@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-Current design-system work is occurring on `feature/portfolio-design-system`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
+Current design-system work is occurring on `feature/portfolio-typography-spacing`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
 
 ## Phased roadmap
 
@@ -93,8 +93,8 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 ### Phase 2 — Information architecture and visual system
 
 - [x] Create page wireframe
-- [ ] Define typography scale
-- [ ] Define spacing system
+- [x] Define typography scale
+- [x] Define spacing system
 - [ ] Define color system
 - [ ] Define card, button, section, and navigation patterns
 - [ ] Choose animation principles
@@ -123,6 +123,26 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - Organize Skills into four evidence-supported groups without ratings or proficiency claims.
 - Preserve logical DOM order and the approved linear project sequences on mobile.
 - Keep core content accessible without JavaScript and do not hide essential content behind accordions or interactions.
+
+#### Approved Version 1 typography decisions
+
+- Use `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif` as the single primary sans-serif stack; do not use an external runtime font service or download font files for Version 1.
+- Use nine semantic typography roles and four supported weights: `400`, `500`, `600`, and `700`.
+- Use `1rem` default body text; keep metadata and captions at no less than `0.875rem`.
+- Use `52ch` for focused text and `68ch` for long-form project content.
+- Allow fluid scaling only for display, section, project, and introductory text.
+- Keep semantic heading levels independent from visual type styles.
+
+#### Approved Version 1 spacing decisions
+
+- Use a `0.25rem` base unit and the approved nine-token spacing scale.
+- Use a `72rem` maximum main container and `clamp(1rem, 4vw, 3rem)` responsive page-edge padding.
+- Use `space-section` for standard full-section boundaries and `space-major` for major narrative transitions.
+- Give MediCheck more generous evidence spacing while keeping EchoTask compact, polished, and readable.
+- Restrict one-off values to documented accessibility, media, or optical needs.
+- Preserve logical DOM order and mobile-first spacing behavior.
+
+**Implementation note:** The provisional Inter-first source token must be reconciled to the approved system-font stack during implementation. Do not download font files merely to preserve the provisional Inter reference.
 
 ### Phase 3 — Technical foundation
 
@@ -212,7 +232,8 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - **2026-07-31:** Astro's generated `dist/` output is now the production GitHub Pages source, the legacy root files remain preserved in the repository, and Phase 3 deployment verification is complete.
 - **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
 - **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
+- **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
 
 ## Current focus
 
-**Phase 2: The page wireframe and section hierarchy are approved. Next, define the typography and spacing systems.**
+**Phase 2: The page wireframe, typography system, and spacing system are approved. Next, define the Version 1 color system.**
