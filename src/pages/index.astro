@@ -20,6 +20,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <section id="about" class="about container" aria-labelledby="about-title">
+    <div class="about-content">
+      <h2 id="about-title">About</h2>
+      <p class="about-introduction">
+        I am a software developer with a Bachelor’s degree in Applied Computer Science and current
+        experience as an IT Operations Analyst. My work and projects have developed my interest in
+        the connection between software, data, systems, and the day-to-day workflows they support.
+      </p>
+      <div class="about-supporting">
+        <p>
+          I enjoy breaking down technical problems, organizing requirements, and turning ideas into
+          practical implementations. My experience includes IT operations, data reporting, workflow
+          analysis, automation, and application development. I am continuing to strengthen my
+          full-stack development skills through focused projects and the rebuild of this portfolio.
+        </p>
+        <p>
+          I am interested in junior-level and related opportunities where I can contribute careful
+          analysis, dependable technical work, and a willingness to keep learning across software
+          and systems.
+        </p>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -29,6 +53,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .hero-content {
     max-width: 52ch;
+  }
+
+  .about {
+    padding-bottom: var(--space-major);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .about-content {
+    max-width: 68ch;
+  }
+
+  .about h2 {
+    margin: 0;
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .about-introduction {
+    max-width: 52ch;
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: 1.55;
+  }
+
+  .about-supporting {
+    max-width: 68ch;
+    margin-top: var(--space-xl);
+    color: var(--color-text-secondary);
+  }
+
+  .about-supporting p {
+    margin: 0;
+  }
+
+  .about-supporting p + p {
+    margin-top: var(--space-md);
   }
 
   .eyebrow {
