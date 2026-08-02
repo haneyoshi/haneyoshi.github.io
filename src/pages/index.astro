@@ -156,6 +156,105 @@ import mediCheckImage from '../../images/Medi_main_window.png';
       </a>
     </article>
   </section>
+
+  <section id="experience" class="experience-education container" aria-labelledby="experience-title">
+    <h2 id="experience-title">Experience and Education</h2>
+
+    <div class="experience-education-pair">
+      <article class="experience-education-entry">
+        <h3>Experience</h3>
+        <h4>IT Operations Analyst</h4>
+        <p class="experience-education-metadata">June 2025–Present</p>
+        <p>
+          Current technical role involving experience in IT operations, data reporting, workflow
+          analysis, automation, and technical problem-solving.
+        </p>
+      </article>
+
+      <article class="experience-education-entry">
+        <h3>Education</h3>
+        <h4>Bachelor’s degree in Applied Computer Science</h4>
+        <p class="experience-education-metadata">University of Winnipeg · Completed 2023</p>
+        <p>
+          The degree established a foundation in software development, computing concepts, and
+          structured problem-solving.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="skills container" aria-labelledby="skills-title">
+    <div class="skills-heading">
+      <h2 id="skills-title">Skills</h2>
+      <p>
+        Skills are presented in evidence-based groups rather than as an exhaustive technology list.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-evidence">
+        <h3>Software development</h3>
+        <p>Python and MySQL were used to develop the MediCheck educational desktop software prototype.</p>
+        <p>
+          JavaScript, React, and Flask support the EchoTask full-stack MVP, while Astro and
+          TypeScript support this portfolio rebuild.
+        </p>
+      </article>
+
+      <article class="skill-evidence">
+        <h3>Data and relational systems</h3>
+        <p>MediCheck demonstrates relational database design and SQL-based information retrieval.</p>
+        <p>EchoTask uses SQLAlchemy and SQLite for relational data modeling and persistence work.</p>
+      </article>
+
+      <article class="skill-evidence">
+        <h3>Workflow analysis and automation</h3>
+        <p>
+          My current role provides experience in workflow analysis and developing small automation
+          tools.
+        </p>
+        <p>
+          EchoTask demonstrates how I translate operational workflow ideas into data structures and
+          application responsibilities.
+        </p>
+      </article>
+
+      <article class="skill-evidence">
+        <h3>Technical operations and problem-solving</h3>
+        <p>
+          My IT Operations Analyst experience and Bachelor’s degree in Applied Computer Science
+          support a practical approach to technical problem-solving.
+        </p>
+        <p>
+          Independent software projects and the iterative rebuild of this portfolio provide further
+          evidence of that approach.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container" aria-labelledby="contact-title">
+    <div class="contact-panel">
+      <h2 id="contact-title">Let's connect</h2>
+      <p class="contact-invitation">
+        I am open to conversations about software development, full-stack development, application
+        support, systems analysis, technical analyst roles, junior-level opportunities, and related
+        technical work.
+      </p>
+      <p class="contact-email">
+        <span>Email</span>
+        <a href="mailto:pokemonbotno001@gmail.com">pokemonbotno001@gmail.com</a>
+      </p>
+      <div class="contact-actions">
+        <a
+          class="action contact-action"
+          href="https://www.linkedin.com/in/yushan-hung-266273212/"
+        >
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -363,6 +462,174 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     margin-top: var(--space-xl);
   }
 
+  .experience-education {
+    padding-bottom: var(--space-section);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .experience-education h2,
+  .experience-education h3,
+  .experience-education h4 {
+    margin: 0;
+  }
+
+  .experience-education h2 {
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .experience-education-pair {
+    display: grid;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .experience-education-entry {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-subtle);
+  }
+
+  .experience-education-entry h3 {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .experience-education-entry h4 {
+    margin-top: var(--space-md);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .experience-education-metadata {
+    margin: var(--space-sm) 0 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .experience-education-entry > p:last-child {
+    max-width: 52ch;
+    margin: var(--space-md) 0 0;
+    color: var(--color-text-secondary);
+  }
+
+  .skills {
+    padding-bottom: var(--space-section);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .skills-heading {
+    max-width: 52ch;
+  }
+
+  .skills h2,
+  .skills h3 {
+    margin: 0;
+  }
+
+  .skills h2 {
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .skills-heading p {
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: 1.55;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .skill-evidence {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .skill-evidence h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .skill-evidence p {
+    max-width: 52ch;
+    margin: var(--space-md) 0 0;
+    color: var(--color-text-secondary);
+  }
+
+  .contact {
+    padding-bottom: var(--space-2xl);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .contact-panel {
+    max-width: 68ch;
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  .contact h2 {
+    margin: 0;
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .contact-invitation {
+    max-width: 52ch;
+    margin: var(--space-lg) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+    line-height: 1.55;
+  }
+
+  .contact-email {
+    margin: var(--space-xl) 0 0;
+    overflow-wrap: anywhere;
+    color: var(--color-text);
+  }
+
+  .contact-email span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .contact-email a {
+    color: var(--color-text);
+  }
+
+  .contact-actions {
+    display: flex;
+    margin-top: var(--space-lg);
+  }
+
+  .contact-action {
+    color: var(--color-accent);
+  }
+
+  .contact-action:hover {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-hover);
+  }
+
+  .contact-action:active {
+    border-color: var(--color-accent-active);
+    color: var(--color-accent-active);
+    transform: translateY(1px);
+  }
+
   .eyebrow {
     margin: 0 0 var(--space-sm);
     color: var(--color-accent);
@@ -446,6 +713,18 @@ import mediCheckImage from '../../images/Medi_main_window.png';
 
     .echotask {
       padding: var(--space-lg);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .experience-education-pair {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-2xl);
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-xl) var(--space-2xl);
     }
   }
 </style>

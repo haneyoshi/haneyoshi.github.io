@@ -1,10 +1,9 @@
----
-const year = new Date().getFullYear();
----
-
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; {year} YuShan Hung. Built with care.</p>
+    <p class="footer-authorship">Designed and built by YuShan.</p>
+    <p class="footer-status">
+      Portfolio rebuild in progress. Core experience and project information is available.
+    </p>
   </div>
 </footer>
 
@@ -17,5 +16,13 @@ const year = new Date().getFullYear();
 
   .site-footer p {
     margin: 0;
+  }
+
+  .site-footer .footer-status {
+    max-width: 52ch;
+    margin-top: var(--space-2xs);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
   }
 </style>
