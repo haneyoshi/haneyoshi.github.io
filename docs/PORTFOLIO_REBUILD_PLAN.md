@@ -188,7 +188,7 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] Navigation and hero
 - [x] About section
 - [x] MediCheck case study
-- [ ] Secondary project section
+- [x] Secondary project section
 - [ ] Experience and education paired blocks
 - [ ] Skills/evidence section
 - [ ] Contact and footer
@@ -266,7 +266,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Implement and manually review the Version 1 navigation and hero across mobile-emulated, tablet, desktop, keyboard-focus, and zoom conditions. The implementation uses ordinary anchor navigation in an always-visible wrapping layout, with no disclosure menu and a non-sticky header; preserves the approved hero content and action order; reconciles the approved warm-neutral, deep-blue, system-font, spacing, and focus tokens; and adds no JavaScript or new dependencies.
 - **2026-08-01:** Implement and manually review the Version 1 About section across mobile, tablet, desktop, 200% zoom, anchor navigation, and overflow conditions. The implementation uses a semantic `#about` section with an `h2`, the exact approved About copy, a single-column text-led layout, a `52ch` introductory measure and `68ch` supporting measure, and the approved reusable section-heading token; it adds no JavaScript, new dependencies, imagery, cards, or unrelated sections.
 - **2026-08-01:** Approve, implement, review, validate, and commit MediCheck on `feature/portfolio-medicheck` as a solo 2024 Python and MySQL desktop educational software prototype focused on clinic workflow management, relational modeling, and SQL queries across related historical records. Approve `images/Medi_main_window.png` as the primary visual evidence; exclude `images/mediBranding.webp` because it provides no implementation evidence and `videos/mediCheckDemo.mp4` because its content, privacy, audio, accessibility, and claims were not fully verified.
+- **2026-08-01:** Approve the EchoTask secondary-project section implemented on `feature/portfolio-echotask`, reviewed across mobile, tablet, desktop, and 100% and 200% zoom, and validated by Astro checking and a production build. It follows MediCheck as a semantic `#echotask` article, presents the paused solo React, Flask, SQLAlchemy, and SQLite full-stack MVP as a compact, text-led work in progress with `Interface preview in development.` and the approved GitHub repository link, and adds no image, mockup, video, JavaScript, or dependency. Projects remains the strongest heading, with MediCheck slightly more prominent than EchoTask and both project titles reduced to remain subordinate. Long-form text remains left-aligned and the wider desktop layout was unchanged; selective columns, wider evidence areas, right-side whitespace, and other page-level composition adjustments are deferred full-page polish after all Phase 4 core sections exist, not an EchoTask defect. The MediCheck demonstration video remains excluded and may be reconsidered during later project-visuals or polish work only after privacy, content and claims, audio, captions or transcript, accessibility, performance, and mobile usability review, without any commitment to publish it.
 
 ## Current focus
 
-**Phase 4: Implement the EchoTask secondary-project section.**
+**Phase 4: Implement the Experience and education paired blocks.**
