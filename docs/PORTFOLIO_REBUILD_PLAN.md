@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-Current design-system work is occurring on `feature/portfolio-mobile-layouts`. GitHub Pages deploys Astro's generated `dist/` output, and the migration has been verified in production. The legacy root files remain preserved in the repository.
+The Astro site produces static `dist/` output intended for GitHub Pages. The existing deployment setup and GitHub Pages constraints must be reviewed before a dedicated deployment-migration task is prepared. The legacy root files remain preserved until the production site is verified after deployment.
 
 ## Phased roadmap
 
@@ -179,9 +179,9 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] Add Astro and TypeScript checking
 - [ ] Add linting and formatting when justified by the project needs
 - [x] Confirm local checks and production build
-- [x] Migrate GitHub Pages deployment to the Astro `dist/` build
+- [ ] Migrate GitHub Pages deployment to the Astro `dist/` build
 
-**Exit condition:** empty site shell builds successfully and the deployment migration is verified.
+**Exit condition:** empty site shell builds successfully. Deployment migration remains separate launch-preparation work.
 
 ### Phase 4 — Core implementation
 
@@ -191,9 +191,9 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] Secondary project section
 - [x] Experience and education paired blocks
 - [x] Skills/evidence section
-- [ ] Contact and footer
+- [x] Contact and footer
 
-**Exit condition:** complete responsive site without advanced effects.
+**Exit condition met:** all core responsive sections are implemented. Advanced effects and optional polish remain deferred.
 
 #### Experience and Education implementation status
 
@@ -215,6 +215,16 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - Do not add proficiency ratings; skill meters, percentages, progress bars, stars, or level labels; a generic technology-logo wall; unsupported tools or technologies; years-of-experience claims; invented achievements, responsibilities, clients, users, metrics, or business outcomes; employer identity or confidential work details; or individual academic assignments. Do not shorten the credential to only "Computer Science."
 - Manual browser review was completed and the section looked good across the previously required viewport and zoom conditions. Astro checking passed with 0 errors, 0 warnings, and 0 hints; the production build completed successfully; `git diff --check` passed; and only `src/pages/index.astro` changed in the implementation.
 - Long-form text remains left-aligned, the main container width remains unchanged, and no page-wide centering or global column redesign has been introduced. Broader right-side whitespace and full-page composition remain deferred until later full-page polish after all Phase 4 core sections exist; this deferred work is not a defect.
+
+#### Contact and Footer implementation status
+
+- Contact appears after Skills in the page structure, ordered as heading, invitation, visible email, then LinkedIn.
+- The public email, `pokemonbotno001@gmail.com`, remains visible and copyable as ordinary inline contact information through a `mailto:` link.
+- LinkedIn is the only styled Contact action and continues to link to `https://www.linkedin.com/in/yushan-hung-266273212/`.
+- The shared Footer contains `Designed and built by YuShan.` and the supporting line `Portfolio rebuild in progress. Core experience and project information is available.` The rebuilding note is visually quieter than the authorship line.
+- The page has exactly one footer landmark. No new dependency, JavaScript, contact form, copyright year, animation, or deployment change was added.
+- Astro checking and the production build passed.
+- The implementation was committed as `402c69b Complete contact and footer sections` and merged into `main` through merge commit `483a1ef Merge pull request #14 from haneyoshi/feature/portfolio-experience-education`.
 
 ### Phase 5 — Signature interaction and polish
 
@@ -276,7 +286,7 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-07-31:** Keep React, Tailwind CSS, animation libraries, and unnecessary dependencies out of the initial foundation.
 - **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
 - **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
-- **2026-07-31:** Astro's generated `dist/` output is now the production GitHub Pages source, the legacy root files remain preserved in the repository, and Phase 3 deployment verification is complete.
+- **2026-07-31:** Keep Astro's generated `dist/` output as the intended GitHub Pages source, preserve the legacy root files, and handle deployment migration and production verification as separate reviewed launch work.
 - **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
 - **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
 - **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
@@ -290,7 +300,17 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve the EchoTask secondary-project section implemented on `feature/portfolio-echotask`, reviewed across mobile, tablet, desktop, and 100% and 200% zoom, and validated by Astro checking and a production build. It follows MediCheck as a semantic `#echotask` article, presents the paused solo React, Flask, SQLAlchemy, and SQLite full-stack MVP as a compact, text-led work in progress with `Interface preview in development.` and the approved GitHub repository link, and adds no image, mockup, video, JavaScript, or dependency. Projects remains the strongest heading, with MediCheck slightly more prominent than EchoTask and both project titles reduced to remain subordinate. Long-form text remains left-aligned and the wider desktop layout was unchanged; selective columns, wider evidence areas, right-side whitespace, and other page-level composition adjustments are deferred full-page polish after all Phase 4 core sections exist, not an EchoTask defect. The MediCheck demonstration video remains excluded and may be reconsidered during later project-visuals or polish work only after privacy, content and claims, audio, captions or transcript, accessibility, performance, and mobile usability review, without any commitment to publish it.
 - **2026-08-01:** Approve Experience and Education as equal-status paired blocks that remain single-column on smaller screens and become two columns from `48rem`; broader desktop page composition remains deferred until all Phase 4 core sections exist.
 - **2026-08-01:** Approve Skills as four evidence-based groups rather than ratings or a generic technology list; keep the section single-column on smaller screens and use two columns from `48rem`, while broader desktop page composition remains deferred until all Phase 4 core sections exist.
+- **2026-08-01:** Approve and merge the Contact and Footer implementation, completing Phase 4 core implementation and all planned core content sections. Defer optional Phase 5 interaction and polish work until after the minimum staged launch. Because résumés have already been submitted, launch readiness is the immediate priority; this decision does not indicate that the Astro site has been deployed or is publicly live.
 
 ## Current focus
 
-**Phase 4: Implement the Contact and footer section.**
+**Minimum staged-launch preparation**
+
+1. Review the existing deployment setup and GitHub Pages constraints.
+2. Define the smallest safe pre-launch QA checklist.
+3. Verify the Astro production build and generated output.
+4. Prepare a dedicated, reviewed deployment-migration task.
+5. Deploy only after review.
+6. Verify the production site before removing any legacy files.
+
+Phase 5 enhancements are deferred until after the initial staged launch. Do not add new visual features during launch preparation, and do not modify the deployment workflow as part of this documentation task.
