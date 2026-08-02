@@ -156,6 +156,32 @@ import mediCheckImage from '../../images/Medi_main_window.png';
       </a>
     </article>
   </section>
+
+  <section id="experience" class="experience-education container" aria-labelledby="experience-title">
+    <h2 id="experience-title">Experience and Education</h2>
+
+    <div class="experience-education-pair">
+      <article class="experience-education-entry">
+        <h3>Experience</h3>
+        <h4>IT Operations Analyst</h4>
+        <p class="experience-education-metadata">June 2025–Present</p>
+        <p>
+          Current technical role involving experience in IT operations, data reporting, workflow
+          analysis, automation, and technical problem-solving.
+        </p>
+      </article>
+
+      <article class="experience-education-entry">
+        <h3>Education</h3>
+        <h4>Bachelor’s degree in Applied Computer Science</h4>
+        <p class="experience-education-metadata">University of Winnipeg · Completed 2023</p>
+        <p>
+          The degree established a foundation in software development, computing concepts, and
+          structured problem-solving.
+        </p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -363,6 +389,61 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     margin-top: var(--space-xl);
   }
 
+  .experience-education {
+    padding-bottom: var(--space-section);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .experience-education h2,
+  .experience-education h3,
+  .experience-education h4 {
+    margin: 0;
+  }
+
+  .experience-education h2 {
+    font-size: var(--font-size-section);
+    line-height: 1.15;
+  }
+
+  .experience-education-pair {
+    display: grid;
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .experience-education-entry {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-subtle);
+  }
+
+  .experience-education-entry h3 {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .experience-education-entry h4 {
+    margin-top: var(--space-md);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .experience-education-metadata {
+    margin: var(--space-sm) 0 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .experience-education-entry > p:last-child {
+    max-width: 52ch;
+    margin: var(--space-md) 0 0;
+    color: var(--color-text-secondary);
+  }
+
   .eyebrow {
     margin: 0 0 var(--space-sm);
     color: var(--color-accent);
@@ -446,6 +527,13 @@ import mediCheckImage from '../../images/Medi_main_window.png';
 
     .echotask {
       padding: var(--space-lg);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .experience-education-pair {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-2xl);
     }
   }
 </style>
