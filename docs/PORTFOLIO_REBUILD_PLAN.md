@@ -190,7 +190,7 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] MediCheck case study
 - [x] Secondary project section
 - [x] Experience and education paired blocks
-- [ ] Skills/evidence section
+- [x] Skills/evidence section
 - [ ] Contact and footer
 
 **Exit condition:** complete responsive site without advanced effects.
@@ -205,6 +205,16 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - Approved public Education content: **Bachelor’s degree in Applied Computer Science**, **University of Winnipeg**, **Completed in 2023**.
 - Do not publish the employer name or confidential systems, processes, or private data. Do not invent responsibilities, metrics, achievements, clients, users, or business outcomes. Do not shorten the credential to only “Computer Science,” and do not feature individual academic assignments.
 - Long-form text remains left-aligned, the main container width remains unchanged, and no page-wide centering or global column redesign has been introduced. The local two-column treatment is sufficient for this section; broader right-side whitespace and full-page composition will be reviewed during later full-page polish after all Phase 4 core sections exist. This deferred work is not a defect.
+
+#### Skills/evidence implementation status
+
+- Implemented in `src/pages/index.astro` as a semantic `#skills` section with a visible linked `h2`, directly after Experience and Education in DOM order. A short introduction precedes four equal-status evidence groups in this exact order: Software development; Data and relational systems; Workflow analysis and automation; Technical operations and problem-solving.
+- The groups use evidence-based prose rather than an unsupported technology list. Software development connects Python and MySQL to MediCheck, JavaScript, React, and Flask to EchoTask, and Astro and TypeScript to the portfolio rebuild. Data and relational systems connects MediCheck relational database design and SQL retrieval with EchoTask relational modeling using SQLAlchemy and SQLite.
+- Workflow analysis and automation connects public-safe current-role experience involving workflow analysis and small automation tools with EchoTask's translation of operational workflow ideas into data structures and application responsibilities. Technical operations and problem-solving connects IT Operations Analyst experience, a Bachelor's degree in Applied Computer Science, independent software projects, and iterative portfolio rebuilding work.
+- The mobile-first layout is single-column on smaller screens and becomes a balanced two-column grid from `48rem`. It reuses the existing typography, spacing, color, surface, border, and layout conventions, includes direct-anchor scroll spacing, and adds no JavaScript, links, packages, or dependencies.
+- Do not add proficiency ratings; skill meters, percentages, progress bars, stars, or level labels; a generic technology-logo wall; unsupported tools or technologies; years-of-experience claims; invented achievements, responsibilities, clients, users, metrics, or business outcomes; employer identity or confidential work details; or individual academic assignments. Do not shorten the credential to only "Computer Science."
+- Manual browser review was completed and the section looked good across the previously required viewport and zoom conditions. Astro checking passed with 0 errors, 0 warnings, and 0 hints; the production build completed successfully; `git diff --check` passed; and only `src/pages/index.astro` changed in the implementation.
+- Long-form text remains left-aligned, the main container width remains unchanged, and no page-wide centering or global column redesign has been introduced. Broader right-side whitespace and full-page composition remain deferred until later full-page polish after all Phase 4 core sections exist; this deferred work is not a defect.
 
 ### Phase 5 — Signature interaction and polish
 
@@ -279,7 +289,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve, implement, review, validate, and commit MediCheck on `feature/portfolio-medicheck` as a solo 2024 Python and MySQL desktop educational software prototype focused on clinic workflow management, relational modeling, and SQL queries across related historical records. Approve `images/Medi_main_window.png` as the primary visual evidence; exclude `images/mediBranding.webp` because it provides no implementation evidence and `videos/mediCheckDemo.mp4` because its content, privacy, audio, accessibility, and claims were not fully verified.
 - **2026-08-01:** Approve the EchoTask secondary-project section implemented on `feature/portfolio-echotask`, reviewed across mobile, tablet, desktop, and 100% and 200% zoom, and validated by Astro checking and a production build. It follows MediCheck as a semantic `#echotask` article, presents the paused solo React, Flask, SQLAlchemy, and SQLite full-stack MVP as a compact, text-led work in progress with `Interface preview in development.` and the approved GitHub repository link, and adds no image, mockup, video, JavaScript, or dependency. Projects remains the strongest heading, with MediCheck slightly more prominent than EchoTask and both project titles reduced to remain subordinate. Long-form text remains left-aligned and the wider desktop layout was unchanged; selective columns, wider evidence areas, right-side whitespace, and other page-level composition adjustments are deferred full-page polish after all Phase 4 core sections exist, not an EchoTask defect. The MediCheck demonstration video remains excluded and may be reconsidered during later project-visuals or polish work only after privacy, content and claims, audio, captions or transcript, accessibility, performance, and mobile usability review, without any commitment to publish it.
 - **2026-08-01:** Approve Experience and Education as equal-status paired blocks that remain single-column on smaller screens and become two columns from `48rem`; broader desktop page composition remains deferred until all Phase 4 core sections exist.
+- **2026-08-01:** Approve Skills as four evidence-based groups rather than ratings or a generic technology list; keep the section single-column on smaller screens and use two columns from `48rem`, while broader desktop page composition remains deferred until all Phase 4 core sections exist.
 
 ## Current focus
 
-**Phase 4: Implement the Skills/evidence section.**
+**Phase 4: Implement the Contact and footer section.**
