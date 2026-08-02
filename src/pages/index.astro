@@ -114,6 +114,47 @@ import mediCheckImage from '../../images/Medi_main_window.png';
         View MediCheck on GitHub
       </a>
     </article>
+
+    <article id="echotask" class="echotask" aria-labelledby="echotask-title">
+      <header>
+        <h3 id="echotask-title">EchoTask</h3>
+        <p class="project-metadata">
+          Full-stack MVP <span aria-hidden="true">·</span> Solo project
+          <span aria-hidden="true">·</span> Work in progress
+        </p>
+      </header>
+
+      <div class="echotask-content">
+        <p>
+          EchoTask is a solo full-stack MVP exploring how an operations team could coordinate
+          attendance, work locations, snow logs, and supply requests through a shared web
+          application.
+        </p>
+        <p>
+          I designed relational models for buildings, work areas, users, attendance, snow logs, and
+          supply requests. The current implementation also includes selected Flask routes and a
+          React prototype for searching supplies, selecting quantities, and reviewing a request
+          summary.
+        </p>
+        <p>
+          The project demonstrates how I translate operational workflows into relational data
+          structures, backend responsibilities, and frontend interactions.
+        </p>
+        <p class="project-technology">
+          <strong>Technology:</strong> React, Flask, SQLAlchemy, SQLite
+        </p>
+      </div>
+
+      <p class="echotask-preview">Interface preview in development.</p>
+
+      <p class="echotask-pause">
+        Development is currently paused while the portfolio rebuild is the priority.
+      </p>
+
+      <a class="action action-secondary echotask-action" href="https://github.com/haneyoshi/WebAppMVP">
+        View EchoTask on GitHub
+      </a>
+    </article>
   </section>
 </BaseLayout>
 
@@ -202,7 +243,7 @@ import mediCheckImage from '../../images/Medi_main_window.png';
   }
 
   .medicheck h3 {
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-size: clamp(1.625rem, 2.5vw, 2.125rem);
     line-height: 1.2;
   }
 
@@ -273,6 +314,53 @@ import mediCheckImage from '../../images/Medi_main_window.png';
 
   .medicheck-action {
     margin-top: var(--space-2xl);
+  }
+
+  .echotask {
+    max-width: 68ch;
+    margin-top: var(--space-major);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface-subtle);
+    scroll-margin-top: var(--space-lg);
+  }
+
+  .echotask h3 {
+    font-size: clamp(1.5rem, 2vw, 1.875rem);
+    line-height: 1.2;
+  }
+
+  .echotask-content {
+    margin-top: var(--space-lg);
+    color: var(--color-text-secondary);
+  }
+
+  .echotask-content p,
+  .echotask-pause {
+    margin: 0;
+  }
+
+  .echotask-content p + p {
+    margin-top: var(--space-md);
+  }
+
+  .echotask-preview {
+    margin: var(--space-xl) 0 0;
+    padding: var(--space-md);
+    border-inline-start: 3px solid var(--color-border-strong);
+    background: var(--color-accent-soft);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+
+  .echotask-pause {
+    margin-top: var(--space-lg);
+    color: var(--color-text-secondary);
+  }
+
+  .echotask-action {
+    margin-top: var(--space-xl);
   }
 
   .eyebrow {
@@ -354,6 +442,10 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     .hero-actions {
       flex-direction: column;
       align-items: stretch;
+    }
+
+    .echotask {
+      padding: var(--space-lg);
     }
   }
 </style>
