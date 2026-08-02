@@ -189,11 +189,22 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] About section
 - [x] MediCheck case study
 - [x] Secondary project section
-- [ ] Experience and education paired blocks
+- [x] Experience and education paired blocks
 - [ ] Skills/evidence section
 - [ ] Contact and footer
 
 **Exit condition:** complete responsive site without advanced effects.
+
+#### Experience and Education implementation status
+
+- Implemented in `src/pages/index.astro` as a semantic `#experience` section with a linked `h2`.
+- Experience precedes Education in DOM order, and both are presented as equal-status paired blocks.
+- The layout is mobile-first and single-column on smaller screens, changing to a balanced two-column layout from `48rem`.
+- The section reuses the existing typography, spacing, color, surface, and border tokens, includes direct-anchor scroll spacing, and adds no JavaScript or dependencies.
+- Approved public Experience content: **IT Operations Analyst**, **June 2025–Present**, with current technical work involving IT operations, data reporting, workflow analysis, automation, and technical problem-solving.
+- Approved public Education content: **Bachelor’s degree in Applied Computer Science**, **University of Winnipeg**, **Completed in 2023**.
+- Do not publish the employer name or confidential systems, processes, or private data. Do not invent responsibilities, metrics, achievements, clients, users, or business outcomes. Do not shorten the credential to only “Computer Science,” and do not feature individual academic assignments.
+- Long-form text remains left-aligned, the main container width remains unchanged, and no page-wide centering or global column redesign has been introduced. The local two-column treatment is sufficient for this section; broader right-side whitespace and full-page composition will be reviewed during later full-page polish after all Phase 4 core sections exist. This deferred work is not a defect.
 
 ### Phase 5 — Signature interaction and polish
 
@@ -267,7 +278,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Implement and manually review the Version 1 About section across mobile, tablet, desktop, 200% zoom, anchor navigation, and overflow conditions. The implementation uses a semantic `#about` section with an `h2`, the exact approved About copy, a single-column text-led layout, a `52ch` introductory measure and `68ch` supporting measure, and the approved reusable section-heading token; it adds no JavaScript, new dependencies, imagery, cards, or unrelated sections.
 - **2026-08-01:** Approve, implement, review, validate, and commit MediCheck on `feature/portfolio-medicheck` as a solo 2024 Python and MySQL desktop educational software prototype focused on clinic workflow management, relational modeling, and SQL queries across related historical records. Approve `images/Medi_main_window.png` as the primary visual evidence; exclude `images/mediBranding.webp` because it provides no implementation evidence and `videos/mediCheckDemo.mp4` because its content, privacy, audio, accessibility, and claims were not fully verified.
 - **2026-08-01:** Approve the EchoTask secondary-project section implemented on `feature/portfolio-echotask`, reviewed across mobile, tablet, desktop, and 100% and 200% zoom, and validated by Astro checking and a production build. It follows MediCheck as a semantic `#echotask` article, presents the paused solo React, Flask, SQLAlchemy, and SQLite full-stack MVP as a compact, text-led work in progress with `Interface preview in development.` and the approved GitHub repository link, and adds no image, mockup, video, JavaScript, or dependency. Projects remains the strongest heading, with MediCheck slightly more prominent than EchoTask and both project titles reduced to remain subordinate. Long-form text remains left-aligned and the wider desktop layout was unchanged; selective columns, wider evidence areas, right-side whitespace, and other page-level composition adjustments are deferred full-page polish after all Phase 4 core sections exist, not an EchoTask defect. The MediCheck demonstration video remains excluded and may be reconsidered during later project-visuals or polish work only after privacy, content and claims, audio, captions or transcript, accessibility, performance, and mobile usability review, without any commitment to publish it.
+- **2026-08-01:** Approve Experience and Education as equal-status paired blocks that remain single-column on smaller screens and become two columns from `48rem`; broader desktop page composition remains deferred until all Phase 4 core sections exist.
 
 ## Current focus
 
-**Phase 4: Implement the Experience and education paired blocks.**
+**Phase 4: Implement the Skills/evidence section.**
