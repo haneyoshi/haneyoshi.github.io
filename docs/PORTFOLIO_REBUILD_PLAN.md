@@ -239,6 +239,12 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 
 Phase 5 polish may continue incrementally while the production site remains live.
 
+#### MediCheck wide-screen visual-polish status
+
+- Merged through pull request #18. From `64rem`, MediCheck uses a two-column composition with the project header spanning both columns; the summary, technical details, and GitHub action appear in the left column, while the existing screenshot and caption appear in the right column. The original single-column presentation remains below `64rem`, with unchanged semantic DOM and accessible reading order.
+- The screenshot remains uncropped and capped at its intrinsic 700px width. No JavaScript, dependency, content, asset, or EchoTask change was introduced; this work improved the presentation of an existing approved screenshot and did not add a mockup or screenshot.
+- Mobile, tablet, breakpoint-boundary, desktop, narrow-reflow, and 200% zoom conditions were reviewed. Astro checking and the production build passed.
+
 ### Phase 6 — Quality assurance
 
 - [ ] Mobile, tablet, and desktop review
@@ -308,7 +314,8 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-01:** Approve Skills as four evidence-based groups rather than ratings or a generic technology list; keep the section single-column on smaller screens and use two columns from `48rem`, while broader desktop page composition remains deferred until all Phase 4 core sections exist.
 - **2026-08-01:** Approve and merge the Contact and Footer implementation, completing Phase 4 core implementation and all planned core content sections. Defer optional Phase 5 interaction and polish work until after the minimum staged launch. Because résumés have already been submitted, launch readiness is the immediate priority; this decision does not indicate that the Astro site has been deployed or is publicly live.
 - **2026-08-03:** The Astro portfolio is live at `https://haneyoshi.github.io/`. GitHub Pages uses GitHub Actions, the existing deployment workflow succeeded, and production verification was completed. The minimum staged launch is complete with no launch blocker found. Legacy root files remain preserved pending a separate reviewed cleanup. Phase 5 polish and broader Phase 6 QA will continue incrementally without intentionally taking the live site offline.
+- **2026-08-03:** The MediCheck project section received a restrained wide-screen composition improvement while preserving its existing content, asset, responsive single-column baseline, and accessible source order.
 
 ## Current focus
 
-First complete and merge this launch-status documentation update. Then select one high-value visible improvement from Phase 5 and continue broader Phase 6 QA incrementally while keeping production live. Do not remove legacy files until a separate reviewed cleanup task is approved.
+The first visible Phase 5 polish improvement is complete, and production remains live. The next task should be one small, high-value improvement or a focused Phase 6 QA task. Broad refactoring, new dependencies, animations, and legacy-file cleanup remain out of scope unless separately justified and reviewed.
