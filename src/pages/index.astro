@@ -727,4 +727,42 @@ import mediCheckImage from '../../images/Medi_main_window.png';
       gap: var(--space-xl) var(--space-2xl);
     }
   }
+
+  @media (min-width: 64rem) {
+    .medicheck {
+      display: grid;
+      grid-template-columns: minmax(18rem, 2fr) minmax(0, 3fr);
+      grid-template-areas:
+        'header header'
+        'summary figure'
+        'details figure'
+        'action figure';
+      column-gap: var(--space-2xl);
+      align-items: start;
+    }
+
+    .medicheck-header {
+      grid-area: header;
+    }
+
+    .medicheck-summary {
+      grid-area: summary;
+    }
+
+    .medicheck-figure {
+      grid-area: figure;
+      width: 100%;
+      margin-top: var(--space-xl);
+      justify-self: end;
+    }
+
+    .medicheck-details {
+      grid-area: details;
+    }
+
+    .medicheck-action {
+      grid-area: action;
+      justify-self: start;
+    }
+  }
 </style>
