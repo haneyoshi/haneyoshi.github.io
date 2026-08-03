@@ -249,7 +249,7 @@ Phase 5 polish may continue incrementally while the production site remains live
 
 - [x] Mobile, tablet, and desktop review
 - [x] Keyboard navigation
-- [ ] Accessibility checks
+- [x] Accessibility checks
 - [ ] Performance audit
 - [x] SEO and social metadata
 - [x] Broken-link review
@@ -262,6 +262,7 @@ Broader Phase 6 quality assurance may continue incrementally while the productio
 
 #### Responsive-review status
 
+- Pull request #25 was merged, and production was verified to contain the responsive corrections and copy updates. The Responsive review is fully complete.
 - Review was completed on `qa/portfolio-responsive-review` at `320 × 800`, `390 × 844`, `768 × 1024`, the `1023 × 900` and `1024 × 900` breakpoint transition, `1440 × 900`, `1920 × 1080`, narrow reflow, and a `720 × 450` CSS viewport representing the layout space available at 200% zoom from `1440 × 900`.
 - One confirmed narrow-width overflow issue was found. The global `body` minimum width was removed, the header navigation received `min-width: 0`, and its narrow-screen column gap was reduced so links can wrap safely.
 - Post-correction checks found no page-level horizontal overflow or overflowing descendants at the reviewed widths. The MediCheck wide-screen composition, semantic order, keyboard behavior, and other responsive layouts remained intact, with no unresolved responsive issue remaining.
@@ -269,10 +270,20 @@ Broader Phase 6 quality assurance may continue incrementally while the productio
 
 #### Copy-and-grammar review status
 
+- Pull request #25 was merged, and production was verified to contain the approved wording corrections. The Copy and grammar review is fully complete.
 - Public copy was compared among `src/pages/index.astro`, `docs/PORTFOLIO_CONTENT.md`, the professional-positioning and claim restrictions in this planning document, and live production where useful.
 - Three small wording corrections were applied consistently: clearer About-role wording; removal of “involving experience in” from the Experience description; and parallel wording for workflow analysis and automation.
 - The exact credential remains `Bachelor’s degree in Applied Computer Science`. MediCheck and EchoTask descriptions remain accurate to their approved scope and maturity.
 - No employer identity, confidential information, unsupported metrics, or overstated claims were found or introduced. The copy-and-grammar review has no remaining blocker.
+
+#### Accessibility-audit status
+
+- The audit reviewed synchronized `main`, a fresh production build served locally, and live production where useful. Production was confirmed to include pull request #25's responsive and copy changes.
+- Lighthouse 13.0.1 was used as a temporary one-time tool against the fresh local Astro preview. It scored `100`, and no automated accessibility audit failed.
+- Manual checks covered document language and title; landmarks; heading hierarchy; semantic sections and articles; accessible link names; skip-link behavior; internal anchors; image alternative text and caption relationship; decorative separators and `aria-hidden`; focus visibility; text resizing and 200% zoom; narrow reflow; reduced motion; touch-target sizing; status wording; duplicate IDs; ARIA references; hidden content; and obvious semantic misuse.
+- No required accessibility correction was found. All implemented text, link, button, focus-indicator, and strong-border combinations passed their applicable contrast requirements.
+- Subtle decorative borders measured approximately `1.29:1` to `1.44:1`, but they do not identify controls, communicate state, or serve as the only means of grouping information. They remain an optional refinement rather than a confirmed WCAG failure.
+- The Accessibility checks item is complete, and no correction branch is required.
 
 #### Keyboard-navigation audit status
 
@@ -363,8 +374,9 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The keyboard-navigation audit was completed, and global smooth-scrolling behavior was removed because it interfered with rapid keyboard focus tracking. Native instant scrolling is retained for accessible keyboard and anchor navigation. The Phase 6 Keyboard navigation checklist item is complete; broader accessibility checks remain open.
 - **2026-08-03:** The broken-link audit was completed with no confirmed broken links, and the Phase 6 Broken-link review item was completed. LinkedIn automation blocking was treated as inconclusive rather than a defect; canonical-link and favicon absence remained for the separate SEO and social metadata audit.
 - **2026-08-03:** The Phase 6 SEO and social metadata item is complete after source, build, and production verification.
+- **2026-08-03:** The Phase 6 accessibility audit completed with no required correction. Lighthouse scored 100 on a fresh local production build, manual semantic and interaction checks passed, and subtle decorative-border contrast remains an optional non-blocking refinement.
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 
 ## Current focus
 
-The responsive review and copy review are complete pending commit, pull-request review, merge, and production verification. The remaining Phase 6 items are Accessibility checks, Performance audit, and Cross-browser review. The next implementation focus should be one read-only Phase 6 accessibility audit. Broad refactoring, new dependencies, animations, and legacy-file cleanup remain out of scope unless separately justified and reviewed.
+Pull request #25 has been merged, production contains its responsive and copy changes, and the Responsive review and Copy and grammar review are fully complete. The remaining Phase 6 items are Performance audit and Cross-browser review. The next focus should be one focused, read-only Phase 6 performance audit. Broad refactoring, new dependencies, animation work, and legacy cleanup remain out of scope unless separately justified and reviewed.
