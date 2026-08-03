@@ -62,7 +62,7 @@ The approved Version 1 page structure and section hierarchy are defined in `docs
 
 React, Tailwind CSS, animation libraries, and other unnecessary dependencies are not part of the initial foundation. They may be considered later only if a verified content or interaction requirement justifies them.
 
-The Astro site produces static `dist/` output intended for GitHub Pages. The existing deployment setup and GitHub Pages constraints must be reviewed before a dedicated deployment-migration task is prepared. The legacy root files remain preserved until the production site is verified after deployment.
+The Astro site is live at `https://haneyoshi.github.io/`. GitHub Pages is configured to use GitHub Actions, the existing Astro deployment workflow completed successfully, and the generated `dist/` site is being served in production. Production verification was completed with no launch blocker found. The legacy root files remain preserved until a separate reviewed cleanup is approved. Do not restart deployment research unless new evidence shows a problem.
 
 ## Phased roadmap
 
@@ -179,9 +179,9 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - [x] Add Astro and TypeScript checking
 - [ ] Add linting and formatting when justified by the project needs
 - [x] Confirm local checks and production build
-- [ ] Migrate GitHub Pages deployment to the Astro `dist/` build
+- [x] Migrate GitHub Pages deployment to the Astro `dist/` build
 
-**Exit condition:** empty site shell builds successfully. Deployment migration remains separate launch-preparation work.
+**Exit condition met:** the technical foundation builds successfully, and the GitHub Pages migration to the Astro `dist/` build has been verified in production.
 
 ### Phase 4 — Core implementation
 
@@ -237,6 +237,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 
 **Exit condition:** interactions reinforce content rather than distract from it.
 
+Phase 5 polish may continue incrementally while the production site remains live.
+
 ### Phase 6 — Quality assurance
 
 - [ ] Mobile, tablet, and desktop review
@@ -250,13 +252,17 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 
 **Exit condition:** launch checklist is complete.
 
+Broader Phase 6 quality assurance may continue incrementally while the production site remains live. Unfinished checklist items remain open.
+
 ### Phase 7 — Launch and maintenance
 
-- [ ] Merge approved pull request
-- [ ] Verify production deployment
+- [x] Merge approved launch-related pull request
+- [x] Verify production deployment
 - [ ] Add analytics only if useful and privacy-appropriate
 - [ ] Document how to add future projects
 - [ ] Create backlog for later improvements
+
+The minimum staged launch is complete. Incremental polish, QA, documentation, and eventual legacy-file cleanup remain separate reviewed work.
 
 ## Working method
 
@@ -301,16 +307,8 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 - **2026-08-01:** Approve Experience and Education as equal-status paired blocks that remain single-column on smaller screens and become two columns from `48rem`; broader desktop page composition remains deferred until all Phase 4 core sections exist.
 - **2026-08-01:** Approve Skills as four evidence-based groups rather than ratings or a generic technology list; keep the section single-column on smaller screens and use two columns from `48rem`, while broader desktop page composition remains deferred until all Phase 4 core sections exist.
 - **2026-08-01:** Approve and merge the Contact and Footer implementation, completing Phase 4 core implementation and all planned core content sections. Defer optional Phase 5 interaction and polish work until after the minimum staged launch. Because résumés have already been submitted, launch readiness is the immediate priority; this decision does not indicate that the Astro site has been deployed or is publicly live.
+- **2026-08-03:** The Astro portfolio is live at `https://haneyoshi.github.io/`. GitHub Pages uses GitHub Actions, the existing deployment workflow succeeded, and production verification was completed. The minimum staged launch is complete with no launch blocker found. Legacy root files remain preserved pending a separate reviewed cleanup. Phase 5 polish and broader Phase 6 QA will continue incrementally without intentionally taking the live site offline.
 
 ## Current focus
 
-**Minimum staged-launch preparation**
-
-1. Review the existing deployment setup and GitHub Pages constraints.
-2. Define the smallest safe pre-launch QA checklist.
-3. Verify the Astro production build and generated output.
-4. Prepare a dedicated, reviewed deployment-migration task.
-5. Deploy only after review.
-6. Verify the production site before removing any legacy files.
-
-Phase 5 enhancements are deferred until after the initial staged launch. Do not add new visual features during launch preparation, and do not modify the deployment workflow as part of this documentation task.
+First complete and merge this launch-status documentation update. Then select one high-value visible improvement from Phase 5 and continue broader Phase 6 QA incrementally while keeping production live. Do not remove legacy files until a separate reviewed cleanup task is approved.
