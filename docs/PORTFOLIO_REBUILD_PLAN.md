@@ -252,7 +252,7 @@ Phase 5 polish may continue incrementally while the production site remains live
 - [ ] Accessibility checks
 - [ ] Performance audit
 - [ ] SEO and social metadata
-- [ ] Broken-link review
+- [x] Broken-link review
 - [ ] Copy and grammar review
 - [ ] Cross-browser review
 
@@ -269,6 +269,17 @@ Broader Phase 6 quality assurance may continue incrementally while the productio
 - The global smooth-scrolling rule was removed from `src/styles/global.css`, restoring instant native browser scrolling for keyboard focus, skip-link navigation, internal anchors, and browser-driven scrolling.
 - The fix did not affect the MediCheck wide-screen layout and was merged through pull request #20.
 - Validation passed: `npm.cmd run check`, `npm.cmd run build`, and `git diff --check`.
+
+#### Broken-link audit status
+
+- A read-only audit reviewed the current Astro source, fresh generated `dist/` output, and live production site.
+- All internal fragment links resolve to existing unique IDs. The skip link and navigation, hero, project, contact, and back-to-top links were reviewed.
+- The MediCheck and EchoTask GitHub repository links returned valid responses. The public email link is correctly formed as a `mailto:` link; mailbox delivery was outside the audit scope.
+- The generated stylesheet and optimized MediCheck image resolve successfully in local output and production.
+- No local-development paths, missing legacy-file links, accidental parent-directory links, or broken `.html` links were found.
+- LinkedIn blocked automated requests with `405` or `999`, so automated verification was inconclusive; this was not evidence of a broken profile link.
+- No confirmed broken links were found. `npm.cmd run check`, `npm.cmd run build`, and `git diff --check` passed. The repository remained clean and no files were modified during the audit.
+- There is currently no explicit canonical link or favicon reference; their absence belongs to the separate SEO and social metadata audit, not the broken-link review.
 
 ### Phase 7 — Launch and maintenance
 
@@ -326,6 +337,7 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The Astro portfolio is live at `https://haneyoshi.github.io/`. GitHub Pages uses GitHub Actions, the existing deployment workflow succeeded, and production verification was completed. The minimum staged launch is complete with no launch blocker found. Legacy root files remain preserved pending a separate reviewed cleanup. Phase 5 polish and broader Phase 6 QA will continue incrementally without intentionally taking the live site offline.
 - **2026-08-03:** The MediCheck project section received a restrained wide-screen composition improvement while preserving its existing content, asset, responsive single-column baseline, and accessible source order.
 - **2026-08-03:** The keyboard-navigation audit was completed, and global smooth-scrolling behavior was removed because it interfered with rapid keyboard focus tracking. Native instant scrolling is retained for accessible keyboard and anchor navigation. The Phase 6 Keyboard navigation checklist item is complete; broader accessibility checks remain open.
+- **2026-08-03:** The broken-link audit was completed with no confirmed broken links, and the Phase 6 Broken-link review item was completed. LinkedIn automation blocking was treated as inconclusive rather than a defect; canonical-link and favicon absence remained for the separate SEO and social metadata audit.
 
 ## Current focus
 
