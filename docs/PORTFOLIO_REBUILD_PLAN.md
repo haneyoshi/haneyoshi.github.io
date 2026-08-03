@@ -254,11 +254,20 @@ Phase 5 polish may continue incrementally while the production site remains live
 - [x] SEO and social metadata
 - [x] Broken-link review
 - [x] Copy and grammar review
-- [ ] Cross-browser review
+- [x] Cross-browser review
 
-**Exit condition:** launch checklist is complete.
+**Exit condition met:** the Phase 6 quality-assurance checklist is complete.
 
-Broader Phase 6 quality assurance may continue incrementally while the production site remains live. Unfinished checklist items remain open.
+Phase 6 quality assurance is complete. Future maintenance may include additional environment-specific checks without reopening the completed launch checklist unless new evidence identifies a problem.
+
+#### Cross-browser-audit status
+
+- The audit used synchronized `main` with a clean working tree and reviewed the current Astro source, fresh local production builds, generated output where useful, and live production.
+- Representative engine coverage included Google Chrome `150.0.7871.187` using Chromium/Blink, Mozilla Firefox `153.0.1` using Gecko, and Playwright `1.62.1` WebKit `26.5` bundled revision `2336` on Windows.
+- Testing covered representative mobile, tablet, desktop, breakpoint, narrow-reflow, and effective 200%-zoom layout conditions. Chrome was reviewed from `320 × 800` through `1440 × 900`; Firefox covered the required responsive widths and breakpoint transitions; and WebKit covered both local and production at every requested viewport.
+- The `48rem` and `64rem` responsive transitions behaved consistently. No required correction, recommended refinement, horizontal overflow, rendering defect, failed site request, page-console error, or meaningful browser-specific inconsistency was found.
+- Astro checking, the production build, and repository validation passed, and no application correction task was required.
+- Representative Chromium, Gecko, and WebKit engine coverage is complete. Playwright WebKit on Windows is not branded Safari; branded Safari on macOS and actual Safari browser zoom were not tested. Actual interactive Firefox 200% zoom and some fully reliable automated keyboard-focus visualization were limited by the automation environment. These limitations did not reveal or establish a reproducible site defect and are not blockers for Phase 6 completion. This review does not claim full coverage of every browser, operating system, assistive technology, or device.
 
 #### Performance-audit status
 
@@ -388,8 +397,9 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The Phase 6 SEO and social metadata item is complete after source, build, and production verification.
 - **2026-08-03:** The Phase 6 accessibility audit completed with no required correction. Lighthouse scored 100 on a fresh local production build, manual semantic and interaction checks passed, and subtle decorative-border contrast remains an optional non-blocking refinement.
 - **2026-08-03:** The Phase 6 performance audit completed with Lighthouse Performance scores of 100 on valid local and production mobile and desktop runs. No required correction was found, and optional MediCheck image optimization is deferred to future image-related work.
+- **2026-08-03:** Phase 6 cross-browser review completed with representative Chromium, Gecko, and WebKit coverage, and no browser-specific correction was required. Branded Safari on macOS and actual Safari browser zoom remain documented environment limitations. Phase 6 quality assurance is complete.
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 
 ## Current focus
 
-The Phase 6 Performance audit is fully complete, and Cross-browser review is the only remaining Phase 6 checklist item. The next focus should be one focused, read-only Phase 6 cross-browser review. Broad refactoring, new dependencies, animations, deployment changes, and legacy cleanup remain out of scope unless separately justified and reviewed.
+**Phase 7: Choose the next focused maintenance or portfolio-improvement task while keeping production live.**
