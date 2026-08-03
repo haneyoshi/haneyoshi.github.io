@@ -351,6 +351,10 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 
 `docs/PORTFOLIO_BACKLOG.md` now contains five prioritized, evidence-driven future improvements covering a public-safe résumé, MediCheck visual review, EchoTask visual evidence, one optional signature interaction, and a privacy-appropriate analytics decision. Each item must remain a separate focused task with its own prerequisites, review, validation, and planning update. The backlog introduces no application, asset, dependency, deployment, legacy-file, or résumé changes.
 
+#### Public-safe résumé requirements status
+
+`docs/PUBLIC_RESUME_REQUIREMENTS.md` inventories the available résumé-related repository sources and distinguishes current authoritative sources from outdated, external, unreadable, or uncertain legacy material. It defines confirmed public facts, privacy restrictions, evidence rules, unresolved facts, required résumé sections, the later drafting sequence, and readiness criteria. No résumé, application, legacy, asset, dependency, deployment, or portfolio-content file was changed.
+
 ## Working method
 
 1. Discuss goals and decisions in ChatGPT.
@@ -405,7 +409,10 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 - **2026-08-03:** Approve `docs/ADDING_PORTFOLIO_PROJECTS.md` as the established guide for adding future portfolio projects while preserving the existing architecture, quality requirements, and reviewed Git workflow.
 - **2026-08-03:** Approve `docs/PORTFOLIO_BACKLOG.md` as the small prioritized maintenance backlog for evidence-driven future portfolio improvements.
+- **2026-08-03:** Approve `docs/PUBLIC_RESUME_REQUIREMENTS.md` as the governing preparation document for a later universal public-safe résumé task.
 
 ## Current focus
 
-**Phase 7: Determine the requirements and source material for a universal public-safe résumé before creating or publishing one.**
+**Phase 7: Resolve the outstanding facts required before drafting the universal public-safe résumé.**
+
+This next focus is fact resolution only. Do not draft, format, export, publish, or link a résumé yet.
