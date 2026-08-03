@@ -250,7 +250,7 @@ Phase 5 polish may continue incrementally while the production site remains live
 - [x] Mobile, tablet, and desktop review
 - [x] Keyboard navigation
 - [x] Accessibility checks
-- [ ] Performance audit
+- [x] Performance audit
 - [x] SEO and social metadata
 - [x] Broken-link review
 - [x] Copy and grammar review
@@ -259,6 +259,18 @@ Phase 5 polish may continue incrementally while the production site remains live
 **Exit condition:** launch checklist is complete.
 
 Broader Phase 6 quality assurance may continue incrementally while the production site remains live. Unfinished checklist items remain open.
+
+#### Performance-audit status
+
+- The audit reviewed synchronized `main`, a fresh local production build, generated `dist` output, and live production.
+- Lighthouse 13.0.1 was used as a temporary one-time tool without adding a project dependency. Valid mobile and desktop runs against local preview and production each scored `100` for Performance.
+- Measured results were approximately `0.2–0.9 s` for FCP, LCP, and Speed Index, with Total Blocking Time of `0 ms` and CLS of `0`.
+- The production page loads without client-side JavaScript, Astro hydration, external fonts, analytics, tracking, or third-party requests. A normal page load used approximately four requests and about `30 KiB` transferred.
+- The MediCheck image is small, lazy-loaded, asynchronously decoded, and has explicit dimensions that prevent layout shift. The metadata-only social-preview image is the largest generated asset but is not downloaded during a normal page visit.
+- No meaningful performance defect, regression, failed request, blocking script, excessive main-thread work, unused-CSS problem, duplicate asset, or production layout shift was found.
+- A smaller responsive variant or modern format for the MediCheck image may be considered during future image or visual-polish work, but estimated mobile savings of about `5 KiB` do not justify a dedicated correction task.
+- GitHub Pages' observed `max-age=600` cache policy is hosting behavior and does not justify a deployment change. Real-user Core Web Vitals field data was unavailable, so the completed results are controlled lab measurements.
+- The Performance audit checklist item is complete, and no correction branch is required.
 
 #### Responsive-review status
 
@@ -375,8 +387,9 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The broken-link audit was completed with no confirmed broken links, and the Phase 6 Broken-link review item was completed. LinkedIn automation blocking was treated as inconclusive rather than a defect; canonical-link and favicon absence remained for the separate SEO and social metadata audit.
 - **2026-08-03:** The Phase 6 SEO and social metadata item is complete after source, build, and production verification.
 - **2026-08-03:** The Phase 6 accessibility audit completed with no required correction. Lighthouse scored 100 on a fresh local production build, manual semantic and interaction checks passed, and subtle decorative-border contrast remains an optional non-blocking refinement.
+- **2026-08-03:** The Phase 6 performance audit completed with Lighthouse Performance scores of 100 on valid local and production mobile and desktop runs. No required correction was found, and optional MediCheck image optimization is deferred to future image-related work.
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 
 ## Current focus
 
-Pull request #25 has been merged, production contains its responsive and copy changes, and the Responsive review and Copy and grammar review are fully complete. The remaining Phase 6 items are Performance audit and Cross-browser review. The next focus should be one focused, read-only Phase 6 performance audit. Broad refactoring, new dependencies, animation work, and legacy cleanup remain out of scope unless separately justified and reviewed.
+The Phase 6 Performance audit is fully complete, and Cross-browser review is the only remaining Phase 6 checklist item. The next focus should be one focused, read-only Phase 6 cross-browser review. Broad refactoring, new dependencies, animations, deployment changes, and legacy cleanup remain out of scope unless separately justified and reviewed.
