@@ -251,7 +251,7 @@ Phase 5 polish may continue incrementally while the production site remains live
 - [x] Keyboard navigation
 - [ ] Accessibility checks
 - [ ] Performance audit
-- [ ] SEO and social metadata
+- [x] SEO and social metadata
 - [x] Broken-link review
 - [ ] Copy and grammar review
 - [ ] Cross-browser review
@@ -280,6 +280,16 @@ Broader Phase 6 quality assurance may continue incrementally while the productio
 - LinkedIn blocked automated requests with `405` or `999`, so automated verification was inconclusive; this was not evidence of a broken profile link.
 - No confirmed broken links were found. `npm.cmd run check`, `npm.cmd run build`, and `git diff --check` passed. The repository remained clean and no files were modified during the audit.
 - There is currently no explicit canonical link or favicon reference; their absence belongs to the separate SEO and social metadata audit, not the broken-link review.
+
+#### SEO and social metadata status
+
+- The existing title and description remained accurate, and one canonical URL was added.
+- Open Graph type, title, description, URL, image, and image alt were added.
+- An original favicon and a 1200 × 630 social-preview image were added.
+- `npm.cmd run check` and `npm.cmd run build` passed, and generated metadata appeared exactly once.
+- Production returned `200`; the canonical URL, favicon reference, and Open Graph metadata were verified live.
+- `/favicon.svg` and `/social-preview.png` both returned `200`.
+- Twitter-specific metadata, JSON-LD, `robots.txt`, and a manifest remain intentionally deferred.
 
 ### Phase 7 — Launch and maintenance
 
@@ -338,6 +348,7 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The MediCheck project section received a restrained wide-screen composition improvement while preserving its existing content, asset, responsive single-column baseline, and accessible source order.
 - **2026-08-03:** The keyboard-navigation audit was completed, and global smooth-scrolling behavior was removed because it interfered with rapid keyboard focus tracking. Native instant scrolling is retained for accessible keyboard and anchor navigation. The Phase 6 Keyboard navigation checklist item is complete; broader accessibility checks remain open.
 - **2026-08-03:** The broken-link audit was completed with no confirmed broken links, and the Phase 6 Broken-link review item was completed. LinkedIn automation blocking was treated as inconclusive rather than a defect; canonical-link and favicon absence remained for the separate SEO and social metadata audit.
+- **2026-08-03:** The Phase 6 SEO and social metadata item is complete after source, build, and production verification.
 
 ## Current focus
 
