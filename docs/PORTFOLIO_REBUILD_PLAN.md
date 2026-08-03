@@ -248,7 +248,7 @@ Phase 5 polish may continue incrementally while the production site remains live
 ### Phase 6 — Quality assurance
 
 - [ ] Mobile, tablet, and desktop review
-- [ ] Keyboard navigation
+- [x] Keyboard navigation
 - [ ] Accessibility checks
 - [ ] Performance audit
 - [ ] SEO and social metadata
@@ -259,6 +259,16 @@ Phase 5 polish may continue incrementally while the production site remains live
 **Exit condition:** launch checklist is complete.
 
 Broader Phase 6 quality assurance may continue incrementally while the production site remains live. Unfinished checklist items remain open.
+
+#### Keyboard-navigation audit status
+
+- A complete keyboard-navigation audit was performed across the page's interactive focus order.
+- `Tab` and `Shift+Tab` were tested at mobile, tablet, desktop, and 200% reflow conditions.
+- Focus indicators remained visible, the skip link remained functional, and internal anchor navigation was verified.
+- One issue was found: global `scroll-behavior: smooth` caused rapid keyboard focus movement to leave the focused element temporarily off-screen while scrolling caught up.
+- The global smooth-scrolling rule was removed from `src/styles/global.css`, restoring instant native browser scrolling for keyboard focus, skip-link navigation, internal anchors, and browser-driven scrolling.
+- The fix did not affect the MediCheck wide-screen layout and was merged through pull request #20.
+- Validation passed: `npm.cmd run check`, `npm.cmd run build`, and `git diff --check`.
 
 ### Phase 7 — Launch and maintenance
 
@@ -315,6 +325,7 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-01:** Approve and merge the Contact and Footer implementation, completing Phase 4 core implementation and all planned core content sections. Defer optional Phase 5 interaction and polish work until after the minimum staged launch. Because résumés have already been submitted, launch readiness is the immediate priority; this decision does not indicate that the Astro site has been deployed or is publicly live.
 - **2026-08-03:** The Astro portfolio is live at `https://haneyoshi.github.io/`. GitHub Pages uses GitHub Actions, the existing deployment workflow succeeded, and production verification was completed. The minimum staged launch is complete with no launch blocker found. Legacy root files remain preserved pending a separate reviewed cleanup. Phase 5 polish and broader Phase 6 QA will continue incrementally without intentionally taking the live site offline.
 - **2026-08-03:** The MediCheck project section received a restrained wide-screen composition improvement while preserving its existing content, asset, responsive single-column baseline, and accessible source order.
+- **2026-08-03:** The keyboard-navigation audit was completed, and global smooth-scrolling behavior was removed because it interfered with rapid keyboard focus tracking. Native instant scrolling is retained for accessible keyboard and anchor navigation. The Phase 6 Keyboard navigation checklist item is complete; broader accessibility checks remain open.
 
 ## Current focus
 
