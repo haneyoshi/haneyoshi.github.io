@@ -58,7 +58,7 @@ The résumé action must remain inactive or clearly marked as unavailable until 
 
 ## 5. About
 
-I am a software developer with a Bachelor’s degree in Applied Computer Science and current experience as an IT Operations Analyst. My work and projects have developed my interest in the connection between software, data, systems, and the day-to-day workflows they support.
+I am a software developer with a Bachelor’s degree in Applied Computer Science, currently working as an IT Operations Analyst. My work and projects have developed my interest in the connection between software, data, systems, and the day-to-day workflows they support.
 
 I enjoy breaking down technical problems, organizing requirements, and turning ideas into practical implementations. My experience includes IT operations, data reporting, workflow analysis, automation, and application development. I am continuing to strengthen my full-stack development skills through focused projects and the rebuild of this portfolio.
 
@@ -70,7 +70,7 @@ I am interested in junior-level and related opportunities where I can contribute
 
 **June 2025–Present**
 
-Current technical role involving experience in IT operations, data reporting, workflow analysis, automation, and technical problem-solving.
+Current technical role involving IT operations, data reporting, workflow analysis, automation, and technical problem-solving.
 
 The employer's name, internal systems, confidential processes, private data, and unconfirmed responsibilities or outcomes must not be published. This description should remain intentionally high level unless additional public-safe details are reviewed and approved.
 
@@ -153,7 +153,7 @@ Skills should be presented in evidence-based groups rather than as an exhaustive
 ### Systems and analysis
 
 - **IT operations:** Supported by the current IT Operations Analyst role.
-- **Workflow analysis:** Developed through professional experience and the process of translating workflow ideas into EchoTask.
+- **Workflow analysis:** My current role provides experience in analyzing workflows and developing small automation tools.
 - **Data reporting:** Supported by current professional experience.
 - **Automation:** Supported by current professional experience.
 - **Technical problem-solving:** Demonstrated across the current role, independent software projects, and applied computer science education.

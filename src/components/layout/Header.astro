@@ -43,7 +43,10 @@ const navigation = [
     align-items: center;
   }
 
-  nav { flex: 1 1 30rem; }
+  nav {
+    min-width: 0;
+    flex: 1 1 30rem;
+  }
 
   .navigation {
     display: flex;
@@ -52,6 +55,12 @@ const navigation = [
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  @media (max-width: 47.999rem) {
+    .navigation {
+      column-gap: var(--space-md);
+    }
   }
 
   .navigation a {

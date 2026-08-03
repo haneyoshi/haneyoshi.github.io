@@ -247,18 +247,32 @@ Phase 5 polish may continue incrementally while the production site remains live
 
 ### Phase 6 — Quality assurance
 
-- [ ] Mobile, tablet, and desktop review
+- [x] Mobile, tablet, and desktop review
 - [x] Keyboard navigation
 - [ ] Accessibility checks
 - [ ] Performance audit
 - [x] SEO and social metadata
 - [x] Broken-link review
-- [ ] Copy and grammar review
+- [x] Copy and grammar review
 - [ ] Cross-browser review
 
 **Exit condition:** launch checklist is complete.
 
 Broader Phase 6 quality assurance may continue incrementally while the production site remains live. Unfinished checklist items remain open.
+
+#### Responsive-review status
+
+- Review was completed on `qa/portfolio-responsive-review` at `320 × 800`, `390 × 844`, `768 × 1024`, the `1023 × 900` and `1024 × 900` breakpoint transition, `1440 × 900`, `1920 × 1080`, narrow reflow, and a `720 × 450` CSS viewport representing the layout space available at 200% zoom from `1440 × 900`.
+- One confirmed narrow-width overflow issue was found. The global `body` minimum width was removed, the header navigation received `min-width: 0`, and its narrow-screen column gap was reduced so links can wrap safely.
+- Post-correction checks found no page-level horizontal overflow or overflowing descendants at the reviewed widths. The MediCheck wide-screen composition, semantic order, keyboard behavior, and other responsive layouts remained intact, with no unresolved responsive issue remaining.
+- This focused review does not constitute cross-browser testing; the separate Cross-browser review remains open.
+
+#### Copy-and-grammar review status
+
+- Public copy was compared among `src/pages/index.astro`, `docs/PORTFOLIO_CONTENT.md`, the professional-positioning and claim restrictions in this planning document, and live production where useful.
+- Three small wording corrections were applied consistently: clearer About-role wording; removal of “involving experience in” from the Experience description; and parallel wording for workflow analysis and automation.
+- The exact credential remains `Bachelor’s degree in Applied Computer Science`. MediCheck and EchoTask descriptions remain accurate to their approved scope and maturity.
+- No employer identity, confidential information, unsupported metrics, or overstated claims were found or introduced. The copy-and-grammar review has no remaining blocker.
 
 #### Keyboard-navigation audit status
 
@@ -349,7 +363,8 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The keyboard-navigation audit was completed, and global smooth-scrolling behavior was removed because it interfered with rapid keyboard focus tracking. Native instant scrolling is retained for accessible keyboard and anchor navigation. The Phase 6 Keyboard navigation checklist item is complete; broader accessibility checks remain open.
 - **2026-08-03:** The broken-link audit was completed with no confirmed broken links, and the Phase 6 Broken-link review item was completed. LinkedIn automation blocking was treated as inconclusive rather than a defect; canonical-link and favicon absence remained for the separate SEO and social metadata audit.
 - **2026-08-03:** The Phase 6 SEO and social metadata item is complete after source, build, and production verification.
+- **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 
 ## Current focus
 
-The first visible Phase 5 polish improvement is complete, and production remains live. The next task should be one small, high-value improvement or a focused Phase 6 QA task. Broad refactoring, new dependencies, animations, and legacy-file cleanup remain out of scope unless separately justified and reviewed.
+The responsive review and copy review are complete pending commit, pull-request review, merge, and production verification. The remaining Phase 6 items are Accessibility checks, Performance audit, and Cross-browser review. The next implementation focus should be one read-only Phase 6 accessibility audit. Broad refactoring, new dependencies, animations, and legacy-file cleanup remain out of scope unless separately justified and reviewed.
