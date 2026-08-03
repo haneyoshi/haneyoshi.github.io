@@ -342,10 +342,12 @@ Phase 6 quality assurance is complete. Future maintenance may include additional
 - [x] Merge approved launch-related pull request
 - [x] Verify production deployment
 - [ ] Add analytics only if useful and privacy-appropriate
-- [ ] Document how to add future projects
+- [x] Document how to add future projects
 - [ ] Create backlog for later improvements
 
 The minimum staged launch is complete. Incremental polish, QA, documentation, and eventual legacy-file cleanup remain separate reviewed work.
+
+`docs/ADDING_PORTFOLIO_PROJECTS.md` now documents the established process for preparing content, reviewing claims and visuals, following the existing Astro structure, preserving accessibility and responsive behavior, validating changes, and using the approved Git workflow. The guide introduces no application, dependency, deployment, asset, or legacy-file changes.
 
 ## Working method
 
@@ -399,7 +401,8 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** The Phase 6 performance audit completed with Lighthouse Performance scores of 100 on valid local and production mobile and desktop runs. No required correction was found, and optional MediCheck image optimization is deferred to future image-related work.
 - **2026-08-03:** Phase 6 cross-browser review completed with representative Chromium, Gecko, and WebKit coverage, and no browser-specific correction was required. Branded Safari on macOS and actual Safari browser zoom remain documented environment limitations. Phase 6 quality assurance is complete.
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
+- **2026-08-03:** Approve `docs/ADDING_PORTFOLIO_PROJECTS.md` as the established guide for adding future portfolio projects while preserving the existing architecture, quality requirements, and reviewed Git workflow.
 
 ## Current focus
 
-**Phase 7: Choose the next focused maintenance or portfolio-improvement task while keeping production live.**
+**Phase 7: Create a small, prioritized backlog for later portfolio improvements while keeping production live.**
