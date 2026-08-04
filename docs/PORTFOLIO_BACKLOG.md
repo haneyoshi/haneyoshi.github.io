@@ -25,9 +25,11 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 - **Likely files or areas involved:** Preserved `images/` and `videos/` assets, `docs/PORTFOLIO_CONTENT.md`, the MediCheck section in `src/pages/index.astro`, and any separately approved optimized public image.
 - **Completion criteria:** A documented keep-or-decline decision exists; if selected, only one reviewed, optimized, explicitly sized, accessible image is added without overstating the prototype, and responsive and build checks pass.
 
-### Priority 2 — EchoTask visual evidence — Highest-priority remaining item
+### Priority 2 — EchoTask visual evidence — Reviewed
 
 - **Task:** Reconsider EchoTask visuals after a reliable public-presentable implementation state exists.
+- **Status:** Review complete. The decision is `Not ready for portfolio visual evidence`. `docs/ECHOTASK_VISUAL_READINESS_REVIEW.md` is the governing review record. Retain `Interface preview in development.` and do not create a screenshot or implementation task.
+- **Decision:** The inspected EchoTask state does not provide a reliable, reproducible, privacy-approved, integrated, public-presentable interface. The main blockers are no frontend-to-backend integration; simulated submission only; no established clean reproducible setup; untracked required supply seed data; no current proof that all 52 tests pass; unresolved privacy provenance for operationally shaped data; tracked secret configuration requiring removal and rotation; and no approved public-presentable visual state. Satisfying these blockers would require EchoTask development or repository maintenance, which remains paused.
 - **Value:** Honest visual evidence could strengthen the project preview once the implementation can support it.
 - **Scope boundary:** Keep EchoTask development paused while the portfolio remains the priority. Review visuals only; do not use this item to develop EchoTask or claim completed integration, authentication, testing, production deployment, or organizational adoption.
 - **Dependencies or prerequisites:** A reliable implementation state, current verified project status, and separately approved evidence suitable for public presentation.
@@ -35,9 +37,10 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 - **Likely files or areas involved:** EchoTask's separately maintained repository or evidence, `docs/PORTFOLIO_CONTENT.md`, the EchoTask section in `src/pages/index.astro`, and any separately approved optimized public image.
 - **Completion criteria:** The temporary presentation is changed only if reviewed evidence exists; status and limitations remain explicit; the visual is accessible, responsive, and accurate; focused checks pass.
 
-### Priority 3 — Optional signature interaction
+### Priority 3 — Optional signature interaction — Highest-priority remaining item
 
 - **Task:** Consider one restrained interaction that improves project storytelling or navigation.
+- **Status:** Not declared ready. First determine whether a specific storytelling or navigation problem exists that static content does not adequately solve.
 - **Value:** A purposeful interaction may make important evidence easier to understand or reach without distracting from the content.
 - **Scope boundary:** Implement at most one interaction only when a specific user need is demonstrated. Require progressive enhancement, keyboard access, reduced-motion support, and no essential content hidden behind JavaScript; add no dependency unless separately justified.
 - **Dependencies or prerequisites:** A documented storytelling or navigation problem that static content does not adequately solve, plus an approved interaction design.
