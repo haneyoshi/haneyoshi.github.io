@@ -37,20 +37,22 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 - **Likely files or areas involved:** EchoTask's separately maintained repository or evidence, `docs/PORTFOLIO_CONTENT.md`, the EchoTask section in `src/pages/index.astro`, and any separately approved optimized public image.
 - **Completion criteria:** The temporary presentation is changed only if reviewed evidence exists; status and limitations remain explicit; the visual is accessible, responsive, and accurate; focused checks pass.
 
-### Priority 3 — Optional signature interaction — Highest-priority remaining item
+### Priority 3 — Optional signature interaction — Reviewed
 
-- **Task:** Consider one restrained interaction that improves project storytelling or navigation.
-- **Status:** Not declared ready. First determine whether a specific storytelling or navigation problem exists that static content does not adequately solve.
+- **Task:** Determine whether one restrained interaction is justified by a material storytelling, navigation, orientation, or evidence-inspection problem.
+- **Status:** Review complete.
+- **Decision:** `No interaction justified`. `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` is the governing record. No interaction implementation or design task should be created under the current evidence.
 - **Value:** A purposeful interaction may make important evidence easier to understand or reach without distracting from the content.
-- **Scope boundary:** Implement at most one interaction only when a specific user need is demonstrated. Require progressive enhancement, keyboard access, reduced-motion support, and no essential content hidden behind JavaScript; add no dependency unless separately justified.
-- **Dependencies or prerequisites:** A documented storytelling or navigation problem that static content does not adequately solve, plus an approved interaction design.
-- **Evidence required before implementation:** Clear user benefit, accessible no-JavaScript behavior, interaction and motion specifications, and justification for any proposed dependency.
+- **Scope boundary:** Reconsider only if a specific material storytelling, navigation, orientation, or evidence-inspection problem is observed and static corrections are first shown insufficient. Accessibility, progressive enhancement, keyboard access, reduced motion, and dependency constraints still apply.
+- **Dependencies or prerequisites:** Evidence meeting the reconsideration threshold, followed by a separately approved interaction design.
+- **Evidence required before implementation:** An observed material problem, evidence that static corrections are insufficient, accessible no-JavaScript behavior, interaction and motion specifications, and justification for any proposed dependency.
 - **Likely files or areas involved:** The relevant Astro component or `src/pages/index.astro`, existing styles, and narrowly scoped script only if necessary.
 - **Completion criteria:** One approved interaction works with keyboard and pointer input, respects reduced motion, preserves all essential content without JavaScript, introduces no unjustified dependency, and passes accessibility, responsive, and build validation.
 
-### Priority 4 — Privacy-appropriate analytics decision
+### Priority 4 — Privacy-appropriate analytics decision — Highest-priority remaining item
 
 - **Task:** Decide whether analytics provide enough value to justify implementation.
+- **Status:** Ready for documentation-only assessment; analytics are not approved for implementation.
 - **Value:** Carefully chosen measurements could answer a defined portfolio question and guide later decisions.
 - **Scope boundary:** Produce a decision and recommendation only; do not assume analytics should be installed. Any implementation requires separate approval.
 - **Dependencies or prerequisites:** A documented measurement purpose and specific questions that cannot be answered adequately without analytics.

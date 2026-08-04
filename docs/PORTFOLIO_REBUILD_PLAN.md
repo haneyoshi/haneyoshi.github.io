@@ -228,7 +228,7 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 
 ### Phase 5 — Signature interaction and polish
 
-- [ ] Add one meaningful signature interaction
+- [x] Assess whether one meaningful signature interaction is justified — review complete; no interaction is currently justified
 - [ ] Add restrained scroll/entry animations
 - [ ] Add project mockups and screenshots
 - [ ] Improve loading behavior
@@ -238,6 +238,10 @@ Normal text requires at least `4.5:1` contrast; large text and meaningful interf
 **Exit condition:** interactions reinforce content rather than distract from it.
 
 Phase 5 polish may continue incrementally while the production site remains live.
+
+#### Signature-interaction review status
+
+`docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` is the governing review record. The accepted decision is `No interaction justified`: the current static portfolio already provides adequate storytelling, navigation, project distinction, evidence connections, keyboard access, and no-JavaScript access. Returning from deep content was the only plausible friction, but its significance was not established; if evidence later shows a material problem, static contextual or back-to-top links are the first remedy. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
 
 #### MediCheck wide-screen visual-polish status
 
@@ -414,9 +418,10 @@ The portfolio remains a single-page public professional profile containing impor
 - **2026-08-03:** The portfolio will remain a single-page public professional profile with important public professional information but without reproducing a full résumé. It will provide no résumé PDF, résumé download link, or dedicated résumé webpage. `docs/PUBLIC_RESUME_REQUIREMENTS.md` is retained as a private source inventory and fact-verification reference for maintaining a private master résumé and preparing job-specific résumés outside the public portfolio workflow. Portfolio and tailored-résumé wording may differ while remaining factual and supported.
 - **2026-08-03:** Completed the MediCheck still-image review recorded in `docs/MEDICHECK_VISUAL_REVIEW.md` and declined adding another screenshot. No preserved additional still image provides non-duplicative implementation evidence, and `images/mediBranding.webp` remains declined because it is decorative and could imply unsupported product or medical maturity. The existing `images/Medi_main_window.png` remains the only approved MediCheck visual. No asset, application, content, dependency, deployment, workflow, video, or legacy-file change was justified.
 - **2026-08-03:** Completed the EchoTask visual-readiness assessment recorded in `docs/ECHOTASK_VISUAL_READINESS_REVIEW.md` with the decision `Not ready for portfolio visual evidence`. The review found substantial backend source evidence but no reliable, reproducible, privacy-approved, integrated interface state. The repository contains 52 discoverable test methods, but 52 passing tests are not verified because the tests were not executed and no current CI result or test report was found. `Interface preview in development.` remains the approved portfolio label. No EchoTask development, screenshot, asset, portfolio application, dependency, deployment, workflow, or legacy-file change was authorized.
+- **2026-08-03:** Accepted the signature-interaction review in `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` with the decision `No interaction justified`. The current static portfolio adequately supports its content and access tasks, and the only plausible friction—returning from deep content—has no established material significance and has static remedies to test first. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
 
 ## Current focus
 
 **Phase 7: Assess readiness for the highest-priority remaining evidence-led portfolio maintenance task.**
 
-The optional signature interaction is now the highest-priority remaining backlog item, but it is not declared ready. The next action is to determine whether a specific storytelling or navigation problem exists that static content does not adequately solve. Do not implement an interaction unless that need and the backlog's accessibility, progressive-enhancement, motion, and dependency prerequisites are established. EchoTask development remains paused, its portfolio label remains `Interface preview in development.`, and no EchoTask screenshot or implementation task is active. Do not create, publish, host, or link a résumé through the portfolio; private master and job-specific résumés remain separate work.
+The privacy-appropriate analytics decision is the highest-priority remaining backlog item ready for assessment. Analytics are not approved for implementation; the next task is documentation only, to determine whether analytics answer a defined portfolio question that cannot be addressed adequately without tracking. EchoTask development remains paused, its portfolio label remains `Interface preview in development.`, and no EchoTask screenshot or implementation task is active. Do not create, publish, host, or link a résumé through the portfolio; private master and job-specific résumés remain separate work.
