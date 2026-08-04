@@ -13,7 +13,7 @@ The portfolio should demonstrate:
 - strong responsive design
 - maintainable code organization
 - honest professional positioning
-- one memorable interactive feature
+- thoughtful, accessible interaction design when supported by a real user need
 
 ## Current positioning
 
@@ -345,7 +345,7 @@ Phase 6 quality assurance is complete. Future maintenance may include additional
 
 - [x] Merge approved launch-related pull request
 - [x] Verify production deployment
-- [ ] Add analytics only if useful and privacy-appropriate
+- [x] Complete privacy-appropriate analytics decision review — no analytics currently justified
 - [x] Document how to add future projects
 - [x] Create backlog for later improvements
 
@@ -354,6 +354,10 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 `docs/ADDING_PORTFOLIO_PROJECTS.md` now documents the established process for preparing content, reviewing claims and visuals, following the existing Astro structure, preserving accessibility and responsive behavior, validating changes, and using the approved Git workflow. The guide introduces no application, dependency, deployment, asset, or legacy-file changes.
 
 `docs/PORTFOLIO_BACKLOG.md` contains four prioritized, evidence-driven future improvements covering MediCheck visual review, EchoTask visual evidence, one optional signature interaction, and a privacy-appropriate analytics decision. Each item must remain a separate focused task with its own prerequisites, review, validation, and planning update. The backlog introduces no résumé-related implementation task.
+
+#### Analytics-review status
+
+`docs/PORTFOLIO_ANALYTICS_DECISION.md` is the governing review record. The accepted decision is `No analytics justified`: no current content, navigation, or maintenance decision requires behavioral tracking; direct feedback, structured review, link testing, repository context, and outreach or job-application outcomes are adequate; and meaningful visitor volume is not established. Privacy, disclosure, accuracy, and maintenance costs are disproportionate under current evidence. No analytics requirements, vendor research, scripts, packages, cookies, tracking, privacy-disclosure change, or implementation task is authorized.
 
 #### Private résumé source-reference status
 
@@ -419,9 +423,10 @@ The portfolio remains a single-page public professional profile containing impor
 - **2026-08-03:** Completed the MediCheck still-image review recorded in `docs/MEDICHECK_VISUAL_REVIEW.md` and declined adding another screenshot. No preserved additional still image provides non-duplicative implementation evidence, and `images/mediBranding.webp` remains declined because it is decorative and could imply unsupported product or medical maturity. The existing `images/Medi_main_window.png` remains the only approved MediCheck visual. No asset, application, content, dependency, deployment, workflow, video, or legacy-file change was justified.
 - **2026-08-03:** Completed the EchoTask visual-readiness assessment recorded in `docs/ECHOTASK_VISUAL_READINESS_REVIEW.md` with the decision `Not ready for portfolio visual evidence`. The review found substantial backend source evidence but no reliable, reproducible, privacy-approved, integrated interface state. The repository contains 52 discoverable test methods, but 52 passing tests are not verified because the tests were not executed and no current CI result or test report was found. `Interface preview in development.` remains the approved portfolio label. No EchoTask development, screenshot, asset, portfolio application, dependency, deployment, workflow, or legacy-file change was authorized.
 - **2026-08-03:** Accepted the signature-interaction review in `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` with the decision `No interaction justified`. The current static portfolio adequately supports its content and access tasks, and the only plausible friction—returning from deep content—has no established material significance and has static remedies to test first. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
+- **2026-08-03:** Accepted the analytics review in `docs/PORTFOLIO_ANALYTICS_DECISION.md` with the decision `No analytics justified`. No current decision requires behavioral tracking, non-tracking methods remain adequate, meaningful visitor volume is not established, and current privacy and maintenance costs are disproportionate. No analytics requirements, vendor research, or implementation task is authorized under the current evidence.
 
 ## Current focus
 
-**Phase 7: Assess readiness for the highest-priority remaining evidence-led portfolio maintenance task.**
+**Phase 7: Routine evidence-led maintenance when a concrete need arises.**
 
-The privacy-appropriate analytics decision is the highest-priority remaining backlog item ready for assessment. Analytics are not approved for implementation; the next task is documentation only, to determine whether analytics answer a defined portfolio question that cannot be addressed adequately without tracking. EchoTask development remains paused, its portfolio label remains `Interface preview in development.`, and no EchoTask screenshot or implementation task is active. Do not create, publish, host, or link a résumé through the portfolio; private master and job-specific résumés remain separate work.
+All four prioritized maintenance items have been reviewed, and the backlog has no remaining ready item under current evidence. Begin new work only for a concrete need such as a factual content update, a verified accessibility, browser, link, or deployment issue, newly approved project evidence, or a recurring user problem supported by evidence. Do not reopen completed interaction, project-visual, résumé, quality-assurance, deployment, or legacy-cleanup decisions without new evidence.
