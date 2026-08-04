@@ -13,9 +13,11 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 
 ## Prioritized backlog
 
-### Priority 1 — MediCheck visual review
+### Priority 1 — MediCheck visual review — Reviewed
 
 - **Task:** Decide whether one additional MediCheck screenshot adds meaningful implementation evidence.
+- **Status:** Review complete. Keep the current single screenshot; do not create an image implementation task. `docs/MEDICHECK_VISUAL_REVIEW.md` is the governing review record.
+- **Decision:** No preserved additional still image provides non-duplicative implementation evidence. `images/mediBranding.webp` was declined because it is decorative and could imply unsupported product or medical maturity. The existing `images/Medi_main_window.png` remains the only approved MediCheck visual.
 - **Value:** A relevant screenshot may clarify the prototype's interface or technical workflow beyond the current image.
 - **Scope boundary:** Review preserved MediCheck assets and, only if justified, select at most one additional screenshot. Exclude decorative branding and unreviewed video; video remains out of scope unless privacy, content, accessibility, audio, captions or transcript, performance, and mobile-usability checks later support publication.
 - **Dependencies or prerequisites:** Access to the preserved assets and a clearly identified evidence gap in the current case study.
@@ -23,7 +25,7 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 - **Likely files or areas involved:** Preserved `images/` and `videos/` assets, `docs/PORTFOLIO_CONTENT.md`, the MediCheck section in `src/pages/index.astro`, and any separately approved optimized public image.
 - **Completion criteria:** A documented keep-or-decline decision exists; if selected, only one reviewed, optimized, explicitly sized, accessible image is added without overstating the prototype, and responsive and build checks pass.
 
-### Priority 2 — EchoTask visual evidence
+### Priority 2 — EchoTask visual evidence — Highest-priority remaining item
 
 - **Task:** Reconsider EchoTask visuals after a reliable public-presentable implementation state exists.
 - **Value:** Honest visual evidence could strengthen the project preview once the implementation can support it.
