@@ -349,11 +349,13 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 
 `docs/ADDING_PORTFOLIO_PROJECTS.md` now documents the established process for preparing content, reviewing claims and visuals, following the existing Astro structure, preserving accessibility and responsive behavior, validating changes, and using the approved Git workflow. The guide introduces no application, dependency, deployment, asset, or legacy-file changes.
 
-`docs/PORTFOLIO_BACKLOG.md` now contains five prioritized, evidence-driven future improvements covering a public-safe résumé, MediCheck visual review, EchoTask visual evidence, one optional signature interaction, and a privacy-appropriate analytics decision. Each item must remain a separate focused task with its own prerequisites, review, validation, and planning update. The backlog introduces no application, asset, dependency, deployment, legacy-file, or résumé changes.
+`docs/PORTFOLIO_BACKLOG.md` contains four prioritized, evidence-driven future improvements covering MediCheck visual review, EchoTask visual evidence, one optional signature interaction, and a privacy-appropriate analytics decision. Each item must remain a separate focused task with its own prerequisites, review, validation, and planning update. The backlog introduces no résumé-related implementation task.
 
-#### Public-safe résumé requirements status
+#### Private résumé source-reference status
 
-`docs/PUBLIC_RESUME_REQUIREMENTS.md` inventories the available résumé-related repository sources and distinguishes current authoritative sources from outdated, external, unreadable, or uncertain legacy material. It defines confirmed public facts, privacy restrictions, evidence rules, unresolved facts, required résumé sections, the later drafting sequence, and readiness criteria. No résumé, application, legacy, asset, dependency, deployment, or portfolio-content file was changed.
+`docs/PUBLIC_RESUME_REQUIREMENTS.md` inventories the reviewed résumé-related source material and distinguishes current authoritative sources from outdated, external, unreadable, or uncertain legacy material. It preserves confirmed facts, privacy restrictions, evidence rules, unresolved fact-verification notes, project claim limits, and readiness criteria for maintaining a private master résumé and preparing job-specific résumés outside the public portfolio workflow.
+
+The portfolio remains a single-page public professional profile containing important public professional information without reproducing the full résumé. It will have no résumé PDF, no résumé download link, and no dedicated résumé webpage. Private master and job-specific résumés remain outside the public portfolio workflow.
 
 ## Working method
 
@@ -384,7 +386,7 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-07-31:** Handle the GitHub Pages deployment migration as a separate reviewed task, and keep the legacy production site intact until the Astro deployment is verified.
 - **2026-07-31:** Do not run the deployment workflow on pull requests; verify it after the reviewed pull request is merged into `main`.
 - **2026-07-31:** Keep Astro's generated `dist/` output as the intended GitHub Pages source, preserve the legacy root files, and handle deployment migration and production verification as separate reviewed launch work.
-- **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” The résumé will remain unavailable until a public-safe universal version is prepared. Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
+- **2026-08-01:** Portfolio copy is maintained separately in `docs/PORTFOLIO_CONTENT.md` as editable Version 1 copy rather than permanently locked text. The public portfolio will use “Software Developer” as the hero title, with junior-level positioning appearing naturally in supporting copy where appropriate. The official education wording is “Bachelor’s degree in Applied Computer Science.” Home address, phone number, immigration information, sensitive personal email, employer identity, and confidential work information will not be published. EchoTask will use “Interface preview in development” until suitable visuals exist.
 - **2026-08-01:** Approve the Version 1 page wireframe and section hierarchy: one Projects section contains MediCheck as the dominant case study and EchoTask as a secondary development preview; Experience and Education use paired blocks; Skills use evidence-based groups; typography and spacing are the next focused Phase 2 task.
 - **2026-08-01:** Approve the Version 1 typography and spacing systems: use the system-font strategy, semantic type scale, `52ch` and `68ch` readable measures, nine-token spacing scale, `72rem` container, and responsive page padding; define the color system next.
 - **2026-08-01:** Approve the Version 1 color system: use a light-mode-only warm-neutral palette, deep-blue accent, warm-orange focus indicator, semantic tokens, and accessible contrast requirements; define card, button, section, and navigation patterns next.
@@ -409,10 +411,10 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 - **2026-08-03:** Small, low-risk corrections may be bundled into a larger related QA task rather than requiring separate branches and pull requests, provided the combined scope remains focused and the complete diff is reviewed.
 - **2026-08-03:** Approve `docs/ADDING_PORTFOLIO_PROJECTS.md` as the established guide for adding future portfolio projects while preserving the existing architecture, quality requirements, and reviewed Git workflow.
 - **2026-08-03:** Approve `docs/PORTFOLIO_BACKLOG.md` as the small prioritized maintenance backlog for evidence-driven future portfolio improvements.
-- **2026-08-03:** Approve `docs/PUBLIC_RESUME_REQUIREMENTS.md` as the governing preparation document for a later universal public-safe résumé task.
+- **2026-08-03:** The portfolio will remain a single-page public professional profile with important public professional information but without reproducing a full résumé. It will provide no résumé PDF, résumé download link, or dedicated résumé webpage. `docs/PUBLIC_RESUME_REQUIREMENTS.md` is retained as a private source inventory and fact-verification reference for maintaining a private master résumé and preparing job-specific résumés outside the public portfolio workflow. Portfolio and tailored-résumé wording may differ while remaining factual and supported.
 
 ## Current focus
 
-**Phase 7: Resolve the outstanding facts required before drafting the universal public-safe résumé.**
+**Phase 7: Select the highest-priority ready evidence-led portfolio maintenance task.**
 
-This next focus is fact resolution only. Do not draft, format, export, publish, or link a résumé yet.
+The next candidate is the MediCheck visual review in `docs/PORTFOLIO_BACKLOG.md`, but it proceeds only if its evidence gap and prerequisites are established. Do not create, publish, host, or link a résumé through the portfolio; private master and job-specific résumés remain separate work.
