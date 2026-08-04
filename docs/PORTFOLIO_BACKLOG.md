@@ -13,6 +13,8 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 
 ## Prioritized backlog
 
+All four current priority items have been reviewed. None authorizes implementation under current evidence, and no priority item is currently ready for further work.
+
 ### Priority 1 — MediCheck visual review — Reviewed
 
 - **Task:** Decide whether one additional MediCheck screenshot adds meaningful implementation evidence.
@@ -49,16 +51,17 @@ This document keeps later portfolio improvements small, evidence-led, and separa
 - **Likely files or areas involved:** The relevant Astro component or `src/pages/index.astro`, existing styles, and narrowly scoped script only if necessary.
 - **Completion criteria:** One approved interaction works with keyboard and pointer input, respects reduced motion, preserves all essential content without JavaScript, introduces no unjustified dependency, and passes accessibility, responsive, and build validation.
 
-### Priority 4 — Privacy-appropriate analytics decision — Highest-priority remaining item
+### Priority 4 — Privacy-appropriate analytics decision — Reviewed
 
 - **Task:** Decide whether analytics provide enough value to justify implementation.
-- **Status:** Ready for documentation-only assessment; analytics are not approved for implementation.
+- **Status:** Review complete.
+- **Decision:** `No analytics justified`. `docs/PORTFOLIO_ANALYTICS_DECISION.md` is the governing review record. No analytics requirements or implementation task should be created under current evidence.
 - **Value:** Carefully chosen measurements could answer a defined portfolio question and guide later decisions.
-- **Scope boundary:** Produce a decision and recommendation only; do not assume analytics should be installed. Any implementation requires separate approval.
-- **Dependencies or prerequisites:** A documented measurement purpose and specific questions that cannot be answered adequately without analytics.
-- **Evidence required before implementation:** Privacy review, data-minimization decision, hosting compatibility review, retention and access considerations, and comparison with a no-analytics option.
+- **Scope boundary:** Do not create analytics requirements, vendor research, or implementation work under current evidence.
+- **Dependencies or prerequisites:** One specific material content, navigation, or maintenance decision; a defined measurement and decision threshold; evidence that non-tracking methods are inadequate; and enough sustained relevant traffic or observation volume.
+- **Evidence required before implementation:** Proportionate privacy, retention, access, disclosure, and GitHub Pages requirements, followed by a separate approved requirements review before implementation.
 - **Likely files or areas involved:** Planning documentation first; only a separately approved implementation may affect Astro layout/configuration, privacy disclosure, or deployment settings.
-- **Completion criteria:** A documented install-or-decline decision explains purpose, minimum data, privacy implications, hosting compatibility, and approval status; no tracking is added without a separate focused task.
+- **Completion criteria:** The decline decision remains in effect unless every reconsideration prerequisite is supported and separately reviewed; no tracking is added under the current evidence.
 
 ## Deferred or excluded work
 
@@ -82,4 +85,4 @@ The portfolio remains a single-page public professional profile containing impor
 
 ## How to select the next task
 
-Future work should normally select only the highest-priority ready item whose prerequisites are satisfied. Each item must become its own focused task, branch, review, validation, and planning update. If the highest-priority item is not ready, record the missing prerequisite and consider the next ready item without changing the priority order.
+All four current priority items have been reviewed, none authorizes implementation under current evidence, and no new speculative priority item should be added. Resume selection only when new evidence satisfies a documented prerequisite; any resulting work must remain a focused task, branch, review, validation, and planning update without changing the priority order.
