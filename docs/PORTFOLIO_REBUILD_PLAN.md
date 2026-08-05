@@ -250,6 +250,10 @@ Phase 5 polish may continue incrementally while the production site remains live
 - If clipboard access fails or is unavailable, the page reveals `pokemonbotno001@gmail.com` as selectable text and provides a clear failure message. The address remains present in the HTML as a readable fallback.
 - This focused use of ordinary browser JavaScript is approved because it directly addresses the reported contact-action usability problem. It does not authorize unrelated interactions, dependencies, animation, or broader Hero changes.
 
+#### Hero external-link decision
+
+- The Hero GitHub and LinkedIn links open in a new tab, use `noopener noreferrer`, and disclose the new-tab behavior in their accessible names. The Copy email interaction remains unchanged. This does not authorize unrelated external-link, navigation, styling, or interaction changes.
+
 #### MediCheck wide-screen visual-polish status
 
 - Merged through pull request #18. From `64rem`, MediCheck uses a two-column composition with the project header spanning both columns; the summary, technical details, and GitHub action appear in the left column, while the existing screenshot and caption appear in the right column. The original single-column presentation remains below `64rem`, with unchanged semantic DOM and accessible reading order.
