@@ -365,6 +365,55 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 
 The portfolio remains a single-page public professional profile containing important public professional information without reproducing the full résumé. It will have no résumé PDF, no résumé download link, and no dedicated résumé webpage. Private master and job-specific résumés remain outside the public portfolio workflow.
 
+## Focused visual-improvement review
+
+Concrete feedback from a review of the live portfolio authorizes a limited visual-improvement cycle. The portfolio remains complete and live; this review is not a full redesign and does not reopen unrelated completed decisions.
+
+### Live-site observations
+
+- The large Hero actions, `View My Work` and `Contact Me`, duplicate destinations already available through the primary navigation.
+- The site name in the header and the Hero introduction `I am YuShan` feel repetitive.
+- GitHub, LinkedIn, and email may be integrated into the Hero as visually secondary contact links, potentially allowing removal of the standalone `Let's Connect` section.
+- Contact controls must remain visible, keyboard accessible, understandable without animation, and subordinate to the Hero's primary professional message.
+- Solid blue-filled buttons feel visually too heavy for the current warm, restrained design. Outlined, neutral, or softer treatments should be evaluated.
+- The page needs stronger visual rhythm between sections while preserving its simple and uncluttered presentation.
+- Hero, About, and the beginning of Projects currently rely mostly on text and whitespace, while EchoTask and Experience/Education use stronger surfaces or containers.
+- Section headings and content headings need a clearer typographic hierarchy. In particular, `Projects` and `MediCheck` currently appear too similar in visual prominence.
+- Containers are only one possible solution. Also consider spacing, dividers, labels, alignment, background-tone changes, borders, typography, and small decorative details.
+- The footer copy `Portfolio rebuild in progress` should not be given more prominence because it conflicts with the completed live status. A later copy refinement may communicate continued growth or maintenance without suggesting that the portfolio is unfinished.
+- A subtle sticky or floating navigation treatment may be evaluated, but it is not currently approved for implementation.
+- Authentic project imagery and restrained animation may be evaluated only where they improve evidence, hierarchy, orientation, or interaction feedback.
+- Decorative stock imagery, unnecessary animation, and interaction added merely to make the site feel modern remain out of scope.
+
+### Review goals
+
+1. Improve Hero hierarchy and remove duplicated actions.
+2. Evaluate a compact, accessible Hero contact treatment for GitHub, LinkedIn, and email.
+3. Evaluate whether the standalone Contact section should be removed, reduced, or retained.
+4. Improve the distinction between section headings, project titles, supporting headings, and body text.
+5. Improve section-to-section visual rhythm without wrapping every section in a container.
+6. Refine button treatments so they better match the warm and restrained visual system.
+7. Evaluate small palette extensions around the existing warm off-white foundation, including navy, muted green, khaki, white, black, light gray, and soft peach or pale coral.
+8. Evaluate relevant external portfolio references as quality research only, without copying layouts, branding, code, or identity.
+
+### Review constraints
+
+- Keep production live.
+- Preserve Astro, TypeScript, ordinary CSS, semantic HTML, accessibility, reduced-motion support, and minimal dependencies.
+- Do not add React, Tailwind CSS, animation libraries, icon packages, or other dependencies without a demonstrated requirement.
+- Do not change deployment.
+- Do not reopen analytics, résumé, legacy cleanup, EchoTask development, completed QA, or unrelated content decisions.
+- Do not approve a large signature interaction under this review.
+- Do not hide essential contact information behind hover, motion, JavaScript, or an ambiguous icon-only interface.
+- Do not place every section inside a card or container.
+- Do not invent content, experience, metrics, project evidence, or professional claims.
+- Treat sticky navigation, new imagery, animation, and expanded colors as optional hypotheses requiring review.
+- Keep the first implementation focused and reversible.
+
+### First proposed implementation
+
+Concentrate the first focused iteration on Hero composition, contact-link presentation, heading hierarchy, section rhythm, and button treatment. Decide on animation, project-image additions, sticky navigation, and broader decorative work only after reviewing that iteration.
+
 ## Working method
 
 1. Discuss goals and decisions in ChatGPT.
@@ -422,11 +471,12 @@ The portfolio remains a single-page public professional profile containing impor
 - **2026-08-03:** The portfolio will remain a single-page public professional profile with important public professional information but without reproducing a full résumé. It will provide no résumé PDF, résumé download link, or dedicated résumé webpage. `docs/PUBLIC_RESUME_REQUIREMENTS.md` is retained as a private source inventory and fact-verification reference for maintaining a private master résumé and preparing job-specific résumés outside the public portfolio workflow. Portfolio and tailored-résumé wording may differ while remaining factual and supported.
 - **2026-08-03:** Completed the MediCheck still-image review recorded in `docs/MEDICHECK_VISUAL_REVIEW.md` and declined adding another screenshot. No preserved additional still image provides non-duplicative implementation evidence, and `images/mediBranding.webp` remains declined because it is decorative and could imply unsupported product or medical maturity. The existing `images/Medi_main_window.png` remains the only approved MediCheck visual. No asset, application, content, dependency, deployment, workflow, video, or legacy-file change was justified.
 - **2026-08-03:** Completed the EchoTask visual-readiness assessment recorded in `docs/ECHOTASK_VISUAL_READINESS_REVIEW.md` with the decision `Not ready for portfolio visual evidence`. The review found substantial backend source evidence but no reliable, reproducible, privacy-approved, integrated interface state. The repository contains 52 discoverable test methods, but 52 passing tests are not verified because the tests were not executed and no current CI result or test report was found. `Interface preview in development.` remains the approved portfolio label. No EchoTask development, screenshot, asset, portfolio application, dependency, deployment, workflow, or legacy-file change was authorized.
-- **2026-08-03:** Accepted the signature-interaction review in `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` with the decision `No interaction justified`. The current static portfolio adequately supports its content and access tasks, and the only plausible friction—returning from deep content—has no established material significance and has static remedies to test first. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
+- **2026-08-03:** Accepted the signature-interaction review in `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` with the decision `No interaction justified`. The current static portfolio adequately supports its content and access tasks, and the only plausible friction—returning from deep content—had no established material significance and has static remedies to test first. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
 - **2026-08-03:** Accepted the analytics review in `docs/PORTFOLIO_ANALYTICS_DECISION.md` with the decision `No analytics justified`. No current decision requires behavioral tracking, non-tracking methods remain adequate, meaningful visitor volume is not established, and current privacy and maintenance costs are disproportionate. No analytics requirements, vendor research, or implementation task is authorized under the current evidence.
+- **2026-08-04:** Concrete feedback from the live site justifies reopening a targeted visual review, but does not authorize a full redesign. Update this master plan before implementation and keep project-level operating instructions unchanged because no permanent working rule has changed.
 
 ## Current focus
 
-**Phase 7: Routine evidence-led maintenance when a concrete need arises.**
+**Focused visual-improvement review authorized by new live-site feedback.**
 
-All four prioritized maintenance items have been reviewed, and the backlog has no remaining ready item under current evidence. Begin new work only for a concrete need such as a factual content update, a verified accessibility, browser, link, or deployment issue, newly approved project evidence, or a recurring user problem supported by evidence. Do not reopen completed interaction, project-visual, résumé, quality-assurance, deployment, or legacy-cleanup decisions without new evidence.
+The portfolio remains complete and live. New concrete feedback temporarily replaces the routine-maintenance-only focus with a limited visual-improvement cycle. The first proposed implementation should concentrate on Hero composition, contact-link presentation, heading hierarchy, section rhythm, and button treatment. Animation, project-image additions, sticky navigation, and broader decorative work must be decided after review of the first focused iteration. Unrelated completed decisions remain closed.
