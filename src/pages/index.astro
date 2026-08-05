@@ -20,8 +20,22 @@ import mediCheckImage from '../../images/Medi_main_window.png';
         <ul>
           <li><a href="https://github.com/haneyoshi">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/yushan-hung-266273212/">LinkedIn</a></li>
-          <li><a href="mailto:pokemonbotno001@gmail.com">Email</a></li>
+          <li>
+            <button
+              id="copy-email"
+              class="copy-email"
+              type="button"
+              data-email="pokemonbotno001@gmail.com"
+            >Copy email</button>
+          </li>
         </ul>
+        <p id="copy-email-status" class="copy-email-status" aria-live="polite" aria-atomic="true"></p>
+        <p id="copy-email-fallback" class="copy-email-fallback" hidden>
+          Email: <span>pokemonbotno001@gmail.com</span>
+        </p>
+        <noscript>
+          <p class="copy-email-fallback">Email: <span>pokemonbotno001@gmail.com</span></p>
+        </noscript>
       </nav>
     </div>
   </section>
@@ -619,15 +633,22 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     list-style: none;
   }
 
-  .hero-contact a {
+  .hero-contact :is(a, button) {
     display: inline-flex;
     min-height: 2.75rem;
     align-items: center;
     padding-inline: var(--space-sm);
+    border: 0;
     border-bottom: 2px solid var(--color-border-strong);
+    background: transparent;
     color: var(--color-text);
+    font: inherit;
     font-weight: 600;
     text-decoration: none;
+  }
+
+  .hero-contact button {
+    cursor: pointer;
   }
 
   .hero-contact li:first-child a {
@@ -646,15 +667,32 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     content: '';
   }
 
-  .hero-contact a:hover {
+  .hero-contact :is(a, button):hover {
     border-color: var(--color-accent-hover);
     color: var(--color-accent-hover);
   }
 
-  .hero-contact a:active {
+  .hero-contact :is(a, button):active {
     border-color: var(--color-accent-active);
     color: var(--color-accent-active);
     transform: translateY(1px);
+  }
+
+  .copy-email-status,
+  .copy-email-fallback {
+    max-width: 100%;
+    margin: var(--space-sm) 0 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    overflow-wrap: anywhere;
+  }
+
+  .copy-email-status:empty {
+    display: none;
+  }
+
+  .copy-email-fallback span {
+    user-select: text;
   }
 
   .action {
@@ -766,3 +804,55 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     }
   }
 </style>
+
+<script>
+  const copyEmailButton = document.querySelector<HTMLButtonElement>('#copy-email');
+  const copyEmailStatus = document.querySelector<HTMLElement>('#copy-email-status');
+  const copyEmailFallback = document.querySelector<HTMLElement>('#copy-email-fallback');
+
+  if (copyEmailButton && copyEmailStatus && copyEmailFallback) {
+    const email = copyEmailButton.dataset.email;
+    let resetTimer: number | undefined;
+    let copyAttempt = 0;
+
+    copyEmailButton.addEventListener('click', async () => {
+      const currentAttempt = ++copyAttempt;
+
+      if (resetTimer !== undefined) {
+        window.clearTimeout(resetTimer);
+        resetTimer = undefined;
+      }
+
+      copyEmailButton.textContent = 'Copy email';
+      copyEmailStatus.textContent = '';
+
+      try {
+        if (!email || !navigator.clipboard?.writeText) {
+          throw new Error('Clipboard access is unavailable.');
+        }
+
+        await navigator.clipboard.writeText(email);
+
+        if (currentAttempt !== copyAttempt) return;
+
+        copyEmailFallback.hidden = true;
+        copyEmailButton.textContent = 'Email copied';
+        copyEmailStatus.textContent = 'Email copied';
+
+        resetTimer = window.setTimeout(() => {
+          if (currentAttempt !== copyAttempt) return;
+
+          copyEmailButton.textContent = 'Copy email';
+          copyEmailStatus.textContent = '';
+          resetTimer = undefined;
+        }, 2500);
+      } catch {
+        if (currentAttempt !== copyAttempt) return;
+
+        copyEmailButton.textContent = 'Copy email';
+        copyEmailFallback.hidden = false;
+        copyEmailStatus.textContent = 'Copy failed — select the email address';
+      }
+    });
+  }
+</script>
