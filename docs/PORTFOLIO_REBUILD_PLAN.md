@@ -243,6 +243,13 @@ Phase 5 polish may continue incrementally while the production site remains live
 
 `docs/SIGNATURE_INTERACTION_JUSTIFICATION_REVIEW.md` is the governing review record. The accepted decision is `No interaction justified`: the current static portfolio already provides adequate storytelling, navigation, project distinction, evidence connections, keyboard access, and no-JavaScript access. Returning from deep content was the only plausible friction, but its significance was not established; if evidence later shows a material problem, static contextual or back-to-top links are the first remedy. No interaction, JavaScript, animation, dependency, or interaction-design task is authorized under the current evidence.
 
+#### Hero email action decision
+
+- Specific live-site usability feedback justifies replacing the Hero email `mailto:` link with a small, progressively enhanced Copy email control. The public address is copied instead of opening a mail application.
+- Successful copying provides visible text feedback and an `aria-live="polite"` announcement, then returns the control label to `Copy email` after a short delay.
+- If clipboard access fails or is unavailable, the page reveals `pokemonbotno001@gmail.com` as selectable text and provides a clear failure message. The address remains present in the HTML as a readable fallback.
+- This focused use of ordinary browser JavaScript is approved because it directly addresses the reported contact-action usability problem. It does not authorize unrelated interactions, dependencies, animation, or broader Hero changes.
+
 #### MediCheck wide-screen visual-polish status
 
 - Merged through pull request #18. From `64rem`, MediCheck uses a two-column composition with the project header spanning both columns; the summary, technical details, and GitHub action appear in the left column, while the existing screenshot and caption appear in the right column. The original single-column presentation remains below `64rem`, with unchanged semantic DOM and accessible reading order.
@@ -475,6 +482,7 @@ Concentrate the first focused iteration on Hero composition, contact-link presen
 - **2026-08-03:** Accepted the analytics review in `docs/PORTFOLIO_ANALYTICS_DECISION.md` with the decision `No analytics justified`. No current decision requires behavioral tracking, non-tracking methods remain adequate, meaningful visitor volume is not established, and current privacy and maintenance costs are disproportionate. No analytics requirements, vendor research, or implementation task is authorized under the current evidence.
 - **2026-08-04:** Concrete feedback from the live site justifies reopening a targeted visual review, but does not authorize a full redesign. Update this master plan before implementation and keep project-level operating instructions unchanged because no permanent working rule has changed.
 - **2026-08-05:** Retain the small section labels because they help distinguish sections, but remove section numbers because they are unnecessary. Use one consistent visual treatment for every section label, with restrained, purposeful decorative color from the approved semantic color system.
+- **2026-08-05:** Replace the Hero email `mailto:` action with an accessible Copy email button in response to specific live-site usability feedback. Copy the public address without opening a mail application, announce successful copying with accessible text, and reveal a selectable email address with clear feedback if clipboard access fails. This focused ordinary-JavaScript enhancement does not reopen unrelated interaction decisions.
 
 ## Current focus
 
