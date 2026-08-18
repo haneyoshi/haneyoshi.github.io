@@ -19,7 +19,7 @@ The portfolio should demonstrate:
 
 YuShan is positioned as a software developer with experience in IT operations, data reporting, workflow analysis, automation, and technical problem-solving. The portfolio supports software development, full-stack development, application support, systems analysis, technical analyst roles, and related technical work without positioning YuShan exclusively as a frontend developer.
 
-The strategy is **depth over volume**. MediCheck is the dominant case study, EchoTask is a secondary development preview whose active implementation is temporarily paused while the portfolio rebuild is the priority, and the portfolio rebuild itself provides evidence of frontend ability.
+The strategy is **depth over volume**. MediCheck remains the dominant case study, EchoTask is a completed solo full-stack MVP, and the portfolio rebuild itself provides evidence of frontend ability.
 
 ## Reference site
 
@@ -118,7 +118,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
   9. Footer
 - Use the primary navigation anchors `#about`, `#projects`, `#experience`, `#skills`, and `#contact`.
 - Give MediCheck, the dominant featured case study, the strongest visual weight.
-- Present EchoTask as the secondary development preview with the temporary label `Interface preview in development.`
+- Present EchoTask as a completed solo full-stack MVP; select its screenshot evidence in a separate reviewed task.
 - Use paired Experience and Education blocks rather than a timeline.
 - Organize Skills into four evidence-supported groups without ratings or proficiency claims.
 - Preserve logical DOM order and the approved linear project sequences on mobile.
@@ -148,7 +148,7 @@ All required page content now exists in draft form in `docs/PORTFOLIO_CONTENT.md
 - Use a warm-neutral foundation with charcoal-blue text, one deep-blue primary accent, and no second strong decorative accent. Reserve warm orange for keyboard focus only.
 - Keep page backgrounds mostly continuous with selective quiet surfaces. Do not require gradients or full application-style status palettes without a real requirement.
 - Use semantic color tokens rather than repeated raw values. Color must not be the only indicator of state, project maturity, selection, or action.
-- Give MediCheck stronger evidence emphasis. Keep EchoTask quieter and do not use warning colors for its unfinished status.
+- Give MediCheck stronger evidence emphasis. Keep EchoTask visually secondary without using status colors to imply unfinished work.
 
 | Core role | Approved value |
 | --- | --- |
@@ -376,9 +376,9 @@ The minimum staged launch is complete. Incremental polish, QA, documentation, an
 
 The portfolio remains a single-page public professional profile containing important public professional information without reproducing the full résumé. It will have no résumé PDF, no résumé download link, and no dedicated résumé webpage. Private master and job-specific résumés remain outside the public portfolio workflow.
 
-## Focused visual-improvement review
+## Prior focused visual-improvement review
 
-Concrete feedback from a review of the live portfolio authorizes a limited visual-improvement cycle. The portfolio remains complete and live; this review is not a full redesign and does not reopen unrelated completed decisions.
+This earlier limited visual-improvement review responded to concrete feedback on the live portfolio. Its observations and constraints remain recorded for context, but it is no longer the current focus and does not reopen unrelated completed decisions.
 
 ### Live-site observations
 
@@ -421,7 +421,7 @@ Concrete feedback from a review of the live portfolio authorizes a limited visua
 - Treat sticky navigation, new imagery, animation, and expanded colors as optional hypotheses requiring review.
 - Keep the first implementation focused and reversible.
 
-### First proposed implementation
+### Prior proposed implementation
 
 Concentrate the first focused iteration on Hero composition, contact-link presentation, heading hierarchy, section rhythm, and button treatment. Decide on animation, project-image additions, sticky navigation, and broader decorative work only after reviewing that iteration.
 
@@ -487,9 +487,10 @@ Concentrate the first focused iteration on Hero composition, contact-link presen
 - **2026-08-04:** Concrete feedback from the live site justifies reopening a targeted visual review, but does not authorize a full redesign. Update this master plan before implementation and keep project-level operating instructions unchanged because no permanent working rule has changed.
 - **2026-08-05:** Retain the small section labels because they help distinguish sections, but remove section numbers because they are unnecessary. Use one consistent visual treatment for every section label, with restrained, purposeful decorative color from the approved semantic color system.
 - **2026-08-05:** Replace the Hero email `mailto:` action with an accessible Copy email button in response to specific live-site usability feedback. Copy the public address without opening a mail application, announce successful copying with accessible text, and reveal a selectable email address with clear feedback if clipboard access fails. This focused ordinary-JavaScript enhancement does not reopen unrelated interaction decisions.
+- **2026-08-18:** Subsequent EchoTask development supersedes the earlier portfolio-status restrictions while preserving those entries as historical decisions. EchoTask has reached its intended full-stack MVP scope and is approved for presentation as a completed solo full-stack MVP. Authentication, role-based backend authorization, real frontend/backend integration, automated backend testing, role-aware workflows, and the implemented operational features may now be discussed where supported. Production deployment and real organizational adoption must still not be claimed. The `Interface preview in development.` treatment is retired, and a focused EchoTask portfolio content and presentation update is authorized. Screenshot and evidence selection will be handled as a separate reviewed task.
 
 ## Current focus
 
-**Focused visual-improvement review authorized by new live-site feedback.**
+**Focused EchoTask content and presentation update.**
 
-The portfolio remains complete and live. New concrete feedback temporarily replaces the routine-maintenance-only focus with a limited visual-improvement cycle. The first proposed implementation should concentrate on Hero composition, contact-link presentation, heading hierarchy, section rhythm, and button treatment. Animation, project-image additions, sticky navigation, and broader decorative work must be decided after review of the first focused iteration. Unrelated completed decisions remain closed.
+The immediate portfolio work is to update EchoTask's public presentation from a development preview to a completed solo full-stack MVP. The update should foreground the end-to-end engineering story, authenticated and role-aware workflows, relational and privacy-aware design decisions, integrated React and Flask implementation, and supported testing evidence without implying production deployment or real organizational adoption. Screenshot and evidence selection remains a separate upcoming reviewed task. Unrelated completed portfolio decisions remain closed.
