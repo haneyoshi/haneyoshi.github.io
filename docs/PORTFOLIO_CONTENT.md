@@ -132,7 +132,13 @@ The implementation includes cookie-based Flask sessions, validation and edge-sta
 
 > View EchoTask on GitHub
 
-**Visual evidence direction:** Screenshot selection is a separate upcoming portfolio-evidence task. Review a concise workflow story using the Dashboard, Assignments, Dashboard after assignment, Attendance, Events, Snow Logs, Supplies, and Accounts views as candidates; do not approve all eight automatically.
+**Approved visual evidence:** Use two complementary screenshots rather than a general feature gallery. The Dashboard shows the coordinator's operational overview of building coverage, worker availability, regular area ownership, temporary coverage, and selected-building detail. Attendance / Worker Availability shows that official attendance remains separate from operational availability. No third screenshot is currently needed.
+
+> Daily coverage overview — Coordinators can review worker availability, regular area ownership, and temporary coverage across buildings from a shared operational dashboard.
+
+> Attendance and availability — EchoTask keeps official attendance separate from operational availability, allowing a worker to remain checked in while temporarily assigned elsewhere.
+
+These screenshots support EchoTask's status as a completed solo full-stack MVP. They must not imply production deployment or real organizational adoption.
 
 EchoTask must not be presented as a production system used by a real organization, commercially deployed software, enterprise-scale software, production-ready, or as having real organizational adoption.
 
@@ -205,7 +211,7 @@ The footer may include the confirmed LinkedIn and GitHub project links where app
 
 - **Résumé URL:** Pending a public-safe universal résumé. Do not publish a temporary private document or invent a URL.
 - **MediCheck visuals:** Pending review and final selection of suitable screenshots from the preserved legacy portfolio.
-- **EchoTask visuals:** Screenshot selection is a separate upcoming portfolio-evidence task; no screenshots are approved by this content update.
+- **EchoTask visuals:** Dashboard and Attendance / Worker Availability are the approved complementary evidence; no third screenshot is currently needed.
 
 Placeholders must be visibly temporary in working materials and must not create broken or misleading public actions.
 
@@ -224,5 +230,4 @@ Placeholders must be visibly temporary in working materials and must not create 
 
 - Public-safe résumé completion and final link
 - Final selection of MediCheck screenshots
-- Reviewed selection of EchoTask workflow screenshots as a separate portfolio-evidence task
 - Final wording refinements after page layout review

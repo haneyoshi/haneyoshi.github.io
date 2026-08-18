@@ -260,6 +260,14 @@ Phase 5 polish may continue incrementally while the production site remains live
 - The screenshot remains uncropped and capped at its intrinsic 700px width. No JavaScript, dependency, content, asset, or EchoTask change was introduced; this work improved the presentation of an existing approved screenshot and did not add a mockup or screenshot.
 - Mobile, tablet, breakpoint-boundary, desktop, narrow-reflow, and 200% zoom conditions were reviewed. Astro checking and the production build passed.
 
+#### EchoTask screenshot-evidence status
+
+- [x] Complete the EchoTask screenshot and evidence selection.
+- The approved complementary evidence consists of Dashboard followed by Attendance / Worker Availability. The first shows operational coverage across buildings; the second shows the distinction between official attendance and operational availability.
+- The two static figures preserve their full aspect ratios, retain visible captions, and follow the readable EchoTask text and repository action in logical DOM order. No third screenshot, carousel, animation, JavaScript interaction, or dependency was justified.
+- Focused Chromium review covered mobile around `390px`, tablet around `768px`, desktop around `1440px`, and a narrow/effective 200% condition. The screenshots and captions reflowed without clipping or page-level horizontal overflow, the GitHub action remained usable, and MediCheck retained the stronger overall visual hierarchy.
+- Astro checking passed with 0 errors, 0 warnings, and 0 hints; the production build completed successfully; and `git diff --check` passed.
+
 ### Phase 6 — Quality assurance
 
 - [x] Mobile, tablet, and desktop review
@@ -488,9 +496,10 @@ Concentrate the first focused iteration on Hero composition, contact-link presen
 - **2026-08-05:** Retain the small section labels because they help distinguish sections, but remove section numbers because they are unnecessary. Use one consistent visual treatment for every section label, with restrained, purposeful decorative color from the approved semantic color system.
 - **2026-08-05:** Replace the Hero email `mailto:` action with an accessible Copy email button in response to specific live-site usability feedback. Copy the public address without opening a mail application, announce successful copying with accessible text, and reveal a selectable email address with clear feedback if clipboard access fails. This focused ordinary-JavaScript enhancement does not reopen unrelated interaction decisions.
 - **2026-08-18:** Subsequent EchoTask development supersedes the earlier portfolio-status restrictions while preserving those entries as historical decisions. EchoTask has reached its intended full-stack MVP scope and is approved for presentation as a completed solo full-stack MVP. Authentication, role-based backend authorization, real frontend/backend integration, automated backend testing, role-aware workflows, and the implemented operational features may now be discussed where supported. Production deployment and real organizational adoption must still not be claimed. The `Interface preview in development.` treatment is retired, and a focused EchoTask portfolio content and presentation update is authorized. Screenshot and evidence selection will be handled as a separate reviewed task.
+- **2026-08-18:** Complete the EchoTask screenshot-evidence selection with Dashboard and Attendance / Worker Availability as two complementary static figures. They demonstrate operational coverage and the distinction between official attendance and operational availability without implying production deployment or organizational adoption. No third screenshot, carousel, animation, JavaScript interaction, or dependency is justified. Focused responsive review, Astro checking, the production build, and whitespace validation passed.
 
 ## Current focus
 
-**Focused EchoTask content and presentation update.**
+**EchoTask screenshot evidence complete.**
 
-The immediate portfolio work is to update EchoTask's public presentation from a development preview to a completed solo full-stack MVP. The update should foreground the end-to-end engineering story, authenticated and role-aware workflows, relational and privacy-aware design decisions, integrated React and Flask implementation, and supported testing evidence without implying production deployment or real organizational adoption. Screenshot and evidence selection remains a separate upcoming reviewed task. Unrelated completed portfolio decisions remain closed.
+The approved Dashboard and Attendance / Worker Availability screenshots now provide complementary evidence for EchoTask's completed solo full-stack MVP presentation. No additional EchoTask visual or interaction work is currently justified. Unrelated completed portfolio decisions remain closed.
