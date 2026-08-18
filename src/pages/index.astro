@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import echoTaskDashboardImage from '../../images/EchoTask_DashBoard.png';
+import echoTaskAvailabilityImage from '../../images/EchoTask_worker Availability.png';
 import mediCheckImage from '../../images/Medi_main_window.png';
 ---
 
@@ -149,59 +151,94 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     </article>
 
     <article id="echotask" class="echotask" aria-labelledby="echotask-title">
-      <header>
-        <h3 id="echotask-title">EchoTask</h3>
-        <p class="project-metadata">
-          Completed full-stack MVP <span aria-hidden="true">·</span> Solo project
-        </p>
-      </header>
+      <div class="echotask-text">
+        <header>
+          <h3 id="echotask-title">EchoTask</h3>
+          <p class="project-metadata">
+            Completed full-stack MVP <span aria-hidden="true">·</span> Solo project
+          </p>
+        </header>
 
-      <div class="echotask-content">
-        <p>
-          EchoTask is a full-stack operations-coordination MVP for daily caretaking and facilities
-          workflows. It brings attendance, worker availability, area coverage, temporary
-          assignments, events, Snow Logs, supply requests, and account management into one
-          role-aware system.
-        </p>
+        <div class="echotask-content">
+          <p>
+            EchoTask is a full-stack operations-coordination MVP for daily caretaking and facilities
+            workflows. It brings attendance, worker availability, area coverage, temporary
+            assignments, events, Snow Logs, supply requests, and account management into one
+            role-aware system.
+          </p>
 
-        <div class="echotask-evidence">
-          <section>
-            <h4>End-to-end implementation</h4>
-            <p>
-              I designed and implemented the relational model, Flask backend, authenticated JSON
-              APIs, business rules, React frontend, and role-aware Worker, Coordinator, and
-              Supervisor workflows.
-            </p>
-          </section>
+          <div class="echotask-evidence">
+            <section>
+              <h4>End-to-end implementation</h4>
+              <p>
+                I designed and implemented the relational model, Flask backend, authenticated JSON
+                APIs, business rules, React frontend, and role-aware Worker, Coordinator, and
+                Supervisor workflows.
+              </p>
+            </section>
 
-          <section>
-            <h4>Design decisions</h4>
-            <p>
-              Permanent worker-area assignments remain separate from temporary daily coverage,
-              private absence reasons are separated from general operational availability, and
-              important relationships use structured relational data. Backend authorization
-              independently enforces role permissions.
-            </p>
-          </section>
+            <section>
+              <h4>Design decisions</h4>
+              <p>
+                Permanent worker-area assignments remain separate from temporary daily coverage,
+                private absence reasons are separated from general operational availability, and
+                important relationships use structured relational data. Backend authorization
+                independently enforces role permissions.
+              </p>
+            </section>
 
-          <section>
-            <h4>Validation</h4>
-            <p>
-              Cookie-based Flask sessions, validation and edge-state handling, and integrated
-              frontend/backend workflows were verified alongside a documented backend checkpoint
-              of 52 passing tests.
-            </p>
-          </section>
+            <section>
+              <h4>Validation</h4>
+              <p>
+                Cookie-based Flask sessions, validation and edge-state handling, and integrated
+                frontend/backend workflows were verified alongside a documented backend checkpoint
+                of 52 passing tests.
+              </p>
+            </section>
+          </div>
+
+          <p class="project-technology">
+            <strong>Technology:</strong> React, Flask, SQLAlchemy, SQLite
+          </p>
         </div>
 
-        <p class="project-technology">
-          <strong>Technology:</strong> React, Flask, SQLAlchemy, SQLite
-        </p>
+        <a class="action action-secondary echotask-action" href="https://github.com/haneyoshi/WebAppMVP">
+          View EchoTask on GitHub
+        </a>
       </div>
 
-      <a class="action action-secondary echotask-action" href="https://github.com/haneyoshi/WebAppMVP">
-        View EchoTask on GitHub
-      </a>
+      <div class="echotask-visuals" aria-label="EchoTask interface evidence">
+        <figure class="echotask-figure">
+          <Image
+            src={echoTaskDashboardImage}
+            alt="EchoTask coordinator Dashboard showing building coverage and details for the selected Agriculture Building."
+            width={1217}
+            height={878}
+            sizes="(max-width: 48rem) calc(100vw - 4rem), (max-width: 72rem) calc(100vw - 8rem), 960px"
+            format="png"
+          />
+          <figcaption>
+            Daily coverage overview — Coordinators can review worker availability, regular area
+            ownership, and temporary coverage across buildings from a shared operational dashboard.
+          </figcaption>
+        </figure>
+
+        <figure class="echotask-figure">
+          <Image
+            src={echoTaskAvailabilityImage}
+            alt="EchoTask coordinator Attendance page showing team statuses, including a worker assigned elsewhere while officially working."
+            width={1192}
+            height={873}
+            sizes="(max-width: 48rem) calc(100vw - 4rem), (max-width: 72rem) calc(100vw - 8rem), 960px"
+            format="png"
+          />
+          <figcaption>
+            Attendance and availability — EchoTask keeps official attendance separate from
+            operational availability, allowing a worker to remain checked in while temporarily
+            assigned elsewhere.
+          </figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 
@@ -476,7 +513,6 @@ import mediCheckImage from '../../images/Medi_main_window.png';
   }
 
   .echotask {
-    max-width: 68ch;
     margin-top: var(--space-major);
     padding: var(--space-xl);
     border: 1px solid var(--color-border);
@@ -500,6 +536,10 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     margin: 0;
   }
 
+  .echotask-text {
+    max-width: 68ch;
+  }
+
   .echotask-evidence {
     display: grid;
     gap: var(--space-lg);
@@ -519,6 +559,34 @@ import mediCheckImage from '../../images/Medi_main_window.png';
 
   .echotask-action {
     margin-top: var(--space-xl);
+  }
+
+  .echotask-visuals {
+    display: grid;
+    gap: var(--space-xl);
+    max-width: 60rem;
+    margin-top: var(--space-2xl);
+  }
+
+  .echotask-figure {
+    margin: 0;
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  .echotask-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .echotask-figure figcaption {
+    margin-top: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
   }
 
   .experience-education {
