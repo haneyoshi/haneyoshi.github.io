@@ -114,29 +114,27 @@ MediCheck must not be described as clinically validated, medically deployed, mac
 
 ### EchoTask
 
-**Full-stack MVP · Solo project · Work in progress**
+**Completed full-stack MVP · Solo project**
 
-EchoTask is a solo full-stack MVP exploring how an operations team could coordinate attendance, work locations, snow logs, and supply requests through a shared web application.
+EchoTask is a full-stack operations-coordination MVP designed around the daily workflows of a caretaking or facilities team. It brings attendance, worker availability, area coverage, temporary assignments, events, Snow Logs, supply requests, and account management into one role-aware system.
 
-I designed relational models for buildings, work areas, users, attendance, snow logs, and supply requests. The current implementation also includes selected Flask routes and a React prototype for searching supplies, selecting quantities, and reviewing a request summary.
+I designed and implemented the project end to end: the relational model, Flask backend and authenticated JSON API, business rules, React frontend, and role-aware Worker, Coordinator, and Supervisor workflows.
 
-The project demonstrates how I translate operational workflows into relational data structures, backend responsibilities, and frontend interactions.
+The design keeps permanent worker-area assignments separate from temporary daily coverage, separates private absence reasons from general operational availability, and models important business relationships as structured relational data instead of free-form text. Backend authorization enforces role permissions beyond the interface, while an explicit UTC/local-time contract keeps timestamps predictable across the application.
 
-Development is currently paused while the portfolio rebuild is the priority.
+The implementation includes cookie-based Flask sessions, validation and edge-state handling, privacy-aware information visibility, SQLite schema evolution, and reproducible demo data. Automated backend testing reached a documented checkpoint of 52 passing tests, alongside browser and frontend/backend integration verification and iterative refinement.
 
 **Technology:** React, Flask, SQLAlchemy, SQLite
 
-**Status:** Work in progress; development currently paused
+**Status:** Completed MVP
 
 **Repository action:**
 
 > View EchoTask on GitHub
 
-**Temporary visual label:**
+**Visual evidence direction:** Screenshot selection is a separate upcoming portfolio-evidence task. Review a concise workflow story using the Dashboard, Assignments, Dashboard after assignment, Attendance, Events, Snow Logs, Supplies, and Accounts views as candidates; do not approve all eight automatically.
 
-> Interface preview in development.
-
-EchoTask must not be presented as having completed authentication, production deployment, complete frontend-to-backend integration, comprehensive testing, or organizational adoption.
+EchoTask must not be presented as a production system used by a real organization, commercially deployed software, enterprise-scale software, production-ready, or as having real organizational adoption.
 
 ## 11. Skills with supporting evidence
 
@@ -207,7 +205,7 @@ The footer may include the confirmed LinkedIn and GitHub project links where app
 
 - **Résumé URL:** Pending a public-safe universal résumé. Do not publish a temporary private document or invent a URL.
 - **MediCheck visuals:** Pending review and final selection of suitable screenshots from the preserved legacy portfolio.
-- **EchoTask visual:** Use the label “Interface preview in development.” until suitable interface visuals are ready.
+- **EchoTask visuals:** Screenshot selection is a separate upcoming portfolio-evidence task; no screenshots are approved by this content update.
 
 Placeholders must be visibly temporary in working materials and must not create broken or misleading public actions.
 
@@ -218,7 +216,7 @@ Placeholders must be visibly temporary in working materials and must not create 
 - Do not invent or imply metrics, achievements, technologies, users, clients, responsibilities, or business outcomes.
 - Do not present prototypes or works in progress as completed, deployed, tested, adopted, or production-ready.
 - Do not claim MediCheck is clinically validated, medically deployed, machine learning, production software, or effective treatment technology.
-- Do not claim EchoTask has completed authentication, production deployment, complete integration, comprehensive testing, or organizational adoption.
+- Do not claim EchoTask is production-deployed, commercially deployed, enterprise-scale, production-ready, used by a real organization, or adopted by one.
 - Do not feature individual academic assignments.
 - Review all future additions for public safety, factual support, and consistency with the project's actual status.
 
@@ -226,5 +224,5 @@ Placeholders must be visibly temporary in working materials and must not create 
 
 - Public-safe résumé completion and final link
 - Final selection of MediCheck screenshots
-- Future EchoTask interface visuals
+- Reviewed selection of EchoTask workflow screenshots as a separate portfolio-evidence task
 - Final wording refinements after page layout review
