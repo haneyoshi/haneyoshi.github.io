@@ -152,37 +152,52 @@ import mediCheckImage from '../../images/Medi_main_window.png';
       <header>
         <h3 id="echotask-title">EchoTask</h3>
         <p class="project-metadata">
-          Full-stack MVP <span aria-hidden="true">·</span> Solo project
-          <span aria-hidden="true">·</span> Work in progress
+          Completed full-stack MVP <span aria-hidden="true">·</span> Solo project
         </p>
       </header>
 
       <div class="echotask-content">
         <p>
-          EchoTask is a solo full-stack MVP exploring how an operations team could coordinate
-          attendance, work locations, snow logs, and supply requests through a shared web
-          application.
+          EchoTask is a full-stack operations-coordination MVP for daily caretaking and facilities
+          workflows. It brings attendance, worker availability, area coverage, temporary
+          assignments, events, Snow Logs, supply requests, and account management into one
+          role-aware system.
         </p>
-        <p>
-          I designed relational models for buildings, work areas, users, attendance, snow logs, and
-          supply requests. The current implementation also includes selected Flask routes and a
-          React prototype for searching supplies, selecting quantities, and reviewing a request
-          summary.
-        </p>
-        <p>
-          The project demonstrates how I translate operational workflows into relational data
-          structures, backend responsibilities, and frontend interactions.
-        </p>
+
+        <div class="echotask-evidence">
+          <section>
+            <h4>End-to-end implementation</h4>
+            <p>
+              I designed and implemented the relational model, Flask backend, authenticated JSON
+              APIs, business rules, React frontend, and role-aware Worker, Coordinator, and
+              Supervisor workflows.
+            </p>
+          </section>
+
+          <section>
+            <h4>Design decisions</h4>
+            <p>
+              Permanent worker-area assignments remain separate from temporary daily coverage,
+              private absence reasons are separated from general operational availability, and
+              important relationships use structured relational data. Backend authorization
+              independently enforces role permissions.
+            </p>
+          </section>
+
+          <section>
+            <h4>Validation</h4>
+            <p>
+              Cookie-based Flask sessions, validation and edge-state handling, and integrated
+              frontend/backend workflows were verified alongside a documented backend checkpoint
+              of 52 passing tests.
+            </p>
+          </section>
+        </div>
+
         <p class="project-technology">
           <strong>Technology:</strong> React, Flask, SQLAlchemy, SQLite
         </p>
       </div>
-
-      <p class="echotask-preview">Interface preview in development.</p>
-
-      <p class="echotask-pause">
-        Development is currently paused while the portfolio rebuild is the priority.
-      </p>
 
       <a class="action action-secondary echotask-action" href="https://github.com/haneyoshi/WebAppMVP">
         View EchoTask on GitHub
@@ -481,27 +496,25 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     color: var(--color-text-secondary);
   }
 
-  .echotask-content p,
-  .echotask-pause {
+  .echotask-content p {
     margin: 0;
   }
 
-  .echotask-content p + p {
-    margin-top: var(--space-md);
+  .echotask-evidence {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
   }
 
-  .echotask-preview {
-    margin: var(--space-xl) 0 0;
-    padding: var(--space-md);
-    border-inline-start: 3px solid var(--color-border-strong);
-    background: var(--color-accent-soft);
+  .echotask-evidence h4 {
+    margin: 0;
     color: var(--color-text-secondary);
-    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
-  .echotask-pause {
-    margin-top: var(--space-lg);
-    color: var(--color-text-secondary);
+  .echotask-evidence p {
+    margin-top: var(--space-sm);
   }
 
   .echotask-action {
