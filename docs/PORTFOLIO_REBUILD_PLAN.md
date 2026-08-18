@@ -413,7 +413,7 @@ This earlier limited visual-improvement review responded to concrete feedback on
 - Preserve Astro, TypeScript, ordinary CSS, semantic HTML, accessibility, reduced-motion support, and minimal dependencies.
 - Do not add React, Tailwind CSS, animation libraries, icon packages, or other dependencies without a demonstrated requirement.
 - Do not change deployment.
-- Do not reopen analytics, résumé, legacy cleanup, completed QA, or unrelated content decisions.
+- Do not reopen analytics, résumé, legacy cleanup, EchoTask development, completed QA, or unrelated content decisions.
 - Do not approve a large signature interaction under this review.
 - Do not hide essential contact information behind hover, motion, JavaScript, or an ambiguous icon-only interface.
 - Do not place every section inside a card or container.
