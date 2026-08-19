@@ -90,15 +90,17 @@ These projects show how I approach software development through practical proble
 
 ### MediCheck
 
-**Educational desktop software prototype · Solo project · 2024**
+**Educational desktop software prototype · Solo project · Built 2024 · Redesigned 2026**
 
-MediCheck is a solo Python and MySQL desktop application created in 2024 as an educational software prototype focused on clinic workflow management, relational database design, and SQL-based information retrieval.
+MediCheck is a Python, Tkinter/ttk, and MySQL educational clinic-workflow prototype that I originally built in 2024 and substantially redesigned in 2026. The current application follows one continuous workflow from patient check-in and queue management through consultation, transactional visit completion, and historical record retrieval.
 
-The project organizes connected historical records involving patients, symptoms, diagnoses, and medications. Its main technical challenge was translating those related areas into a structured relational model and building application workflows that could store, retrieve, and review the information.
+**Workflow redesign:** I redesigned the original popup-heavy, debug-style interface as a persistent multi-workspace application shell with clear navigation and integrated patient workflows. The main flow moves from Check In / Register through Patient Queue, Take Patient, Symptoms, Diagnosis, Prescription, Review, Complete Visit, and Patient History. Consultation is one four-stage experience—Symptoms, Diagnosis, Prescription, and Review—that keeps patient context and confirmed selections visible. This preserved useful backend behavior while improving the existing application rather than replacing it with an unnecessary rewrite.
 
-I worked across the Python application logic, desktop interface, MySQL schema, database connection, sample-data generation, and SQL queries across related records.
+**Relational data and SQL:** MediCheck models patients, visits, symptoms, diagnoses, prescriptions, and medicines as related data. Historical records reconstruct visits across those relational tables and support symptom, diagnosis, and medicine suggestions through SQL queries, associations, aggregation, frequency analysis, and ranking. The system distinguishes generated suggestions from confirmed selections; it does not use a trained machine-learning model or medically validated AI.
 
-**Technology:** Python, MySQL
+**Reliability and state:** Completing a visit now persists the complete logical case in one explicit database transaction. A persistence failure rolls the transaction back while preserving consultation state for retry; state is cleared only after successful completion, and duplicate completion is guarded against. The redesign also included consistent patient-ID normalization, validation, empty and error states, state-lifecycle fixes, focused automated testing, and manual end-to-end QA with a real local MySQL environment.
+
+**Technology:** Python, Tkinter/ttk, MySQL
 
 **Status:** Educational software prototype
 
@@ -106,9 +108,13 @@ I worked across the Python application logic, desktop interface, MySQL schema, d
 
 > View MediCheck on GitHub
 
-Suitable screenshots may already exist in the preserved legacy portfolio. They will be reviewed later before any are selected for the rebuilt portfolio.
+**Approved visual evidence:** Use the redesigned 2026 Dashboard as the primary visual and the Symptoms / consultation workspace as the supporting visual. The Patient Records / history screenshot remains a reserve image only. Diagnosis and Prescription screenshots are not selected because they duplicate the consultation evidence and would unnecessarily lengthen the presentation. No third image, carousel, animation, video, JavaScript interaction, or dependency is approved.
 
-MediCheck must not be described as clinically validated, medically deployed, machine learning, production software, or effective treatment technology. Its educational and prototype status must remain clear wherever it appears.
+> Clinic workflow overview — The redesigned application shell brings queue status, patient actions, and current clinic activity into one consistent workspace.
+
+> Guided consultation workflow — A four-stage consultation keeps patient context and confirmed selections visible while historical relational data surfaces related suggestions.
+
+MediCheck must not be described as clinically validated, medically deployed, machine learning, medical AI, a real deployed clinical system, production-ready, production software, regulatory-compliant software, or effective treatment technology. Its educational and prototype status must remain clear wherever it appears.
 
 ## 10. EchoTask
 
@@ -148,11 +154,11 @@ Skills should be presented in evidence-based groups rather than as an exhaustive
 
 ### Software development
 
-- **Python:** Used to develop the MediCheck educational desktop software prototype.
+- **Python:** Used for MediCheck's desktop application logic, workflow redesign, validation, and state lifecycle.
 - **JavaScript and React:** Used in the EchoTask full-stack MVP.
 - **Flask:** Used for EchoTask's backend development.
 - **SQLAlchemy and SQLite:** Used for data modeling and persistence work in EchoTask.
-- **MySQL:** Used as the database for MediCheck.
+- **MySQL:** Used for MediCheck's relational visit records, SQL-driven historical suggestions, and transactional persistence.
 
 ### Systems and analysis
 
@@ -210,7 +216,7 @@ The footer may include the confirmed LinkedIn and GitHub project links where app
 ## 16. Temporary placeholders
 
 - **Résumé URL:** Pending a public-safe universal résumé. Do not publish a temporary private document or invent a URL.
-- **MediCheck visuals:** Pending review and final selection of suitable screenshots from the preserved legacy portfolio.
+- **MediCheck visuals:** The redesigned 2026 Dashboard and Symptoms / consultation screenshots are the approved two-image evidence set. Patient Records / history remains reserve-only; no third image is currently needed.
 - **EchoTask visuals:** Dashboard and Attendance / Worker Availability are the approved complementary evidence; no third screenshot is currently needed.
 
 Placeholders must be visibly temporary in working materials and must not create broken or misleading public actions.
@@ -220,8 +226,8 @@ Placeholders must be visibly temporary in working materials and must not create 
 - Do not publish a home address, phone number, immigration information, sensitive personal email, or other private information.
 - Do not publish the current employer's name, confidential operational details, internal systems, private data, or unapproved work examples.
 - Do not invent or imply metrics, achievements, technologies, users, clients, responsibilities, or business outcomes.
-- Do not present prototypes or works in progress as completed, deployed, tested, adopted, or production-ready.
-- Do not claim MediCheck is clinically validated, medically deployed, machine learning, production software, or effective treatment technology.
+- Do not present prototypes or works in progress as production-deployed, adopted, or production-ready. Describe completion, testing, or validation only when supported by authoritative project evidence.
+- Do not claim MediCheck is clinically validated, medically deployed, machine learning, medical AI, a real deployed clinical system, production-ready, production software, regulatory-compliant software, or effective treatment technology.
 - Do not claim EchoTask is production-deployed, commercially deployed, enterprise-scale, production-ready, used by a real organization, or adopted by one.
 - Do not feature individual academic assignments.
 - Review all future additions for public safety, factual support, and consistency with the project's actual status.
@@ -229,5 +235,5 @@ Placeholders must be visibly temporary in working materials and must not create 
 ## 18. Remaining review items
 
 - Public-safe résumé completion and final link
-- Final selection of MediCheck screenshots
+- MediCheck implementation refresh after the documentation changes are reviewed
 - Final wording refinements after page layout review
