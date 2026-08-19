@@ -3,7 +3,8 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import echoTaskDashboardImage from '../../images/EchoTask_DashBoard.png';
 import echoTaskAvailabilityImage from '../../images/EchoTask_worker Availability.png';
-import mediCheckImage from '../../images/Medi_main_window.png';
+import mediCheckDashboardImage from '../../images/MediCheck_Dashboard.png';
+import mediCheckConsultationImage from '../../images/MediCheck_Consultation_Symptoms.png';
 ---
 
 <BaseLayout
@@ -98,52 +99,85 @@ import mediCheckImage from '../../images/Medi_main_window.png';
         <h3 id="medicheck-title">MediCheck</h3>
         <p class="project-metadata">
           Educational desktop software prototype <span aria-hidden="true">·</span> Solo project
-          <span aria-hidden="true">·</span> 2024
+          <span aria-hidden="true">·</span> Built 2024 <span aria-hidden="true">·</span>
+          Redesigned 2026
         </p>
       </header>
 
       <div class="medicheck-summary">
         <p>
-          MediCheck is a solo Python and MySQL desktop application created in 2024 as an educational
-          software prototype focused on clinic workflow management, relational database design, and
-          SQL-based information retrieval across related historical records.
+          MediCheck is a Python, Tkinter/ttk, and MySQL educational clinic-workflow prototype that I
+          originally built in 2024 and substantially redesigned in 2026. The current application
+          follows one continuous workflow from patient check-in and queue management through
+          consultation, transactional visit completion, and historical record retrieval.
         </p>
-        <p class="project-technology"><strong>Technology:</strong> Python, MySQL</p>
+        <p class="project-technology"><strong>Technology:</strong> Python, Tkinter/ttk, MySQL</p>
       </div>
 
-      <figure class="medicheck-figure">
+      <figure class="medicheck-figure medicheck-figure-dashboard">
         <Image
-          src={mediCheckImage}
-          alt="MediCheck desktop prototype showing a Patient ID field and controls for check-in, queue review, visit history, and patient profile retrieval."
-          width={700}
-          height={700}
-          sizes="(max-width: 48rem) calc(100vw - 2rem), 700px"
+          src={mediCheckDashboardImage}
+          alt="Redesigned MediCheck Dashboard showing the persistent application shell and clinic workflow overview."
+          width={1119}
+          height={749}
+          sizes="(max-width: 64rem) calc(100vw - 2rem), 60vw"
           format="png"
         />
         <figcaption>
-          MediCheck’s desktop interface groups patient check-in, queue, visit-history, and
-          profile-retrieval workflows in one prototype window.
+          <strong>Clinic workflow overview</strong> — The redesigned application shell brings queue
+          status, patient actions, and current clinic activity into one consistent workspace.
         </figcaption>
       </figure>
 
       <div class="medicheck-details">
-        <section aria-labelledby="medicheck-approach-title">
-          <h4 id="medicheck-approach-title">Problem and approach</h4>
+        <section aria-labelledby="medicheck-workflow-title">
+          <h4 id="medicheck-workflow-title">Workflow redesign</h4>
           <p>
-            The project’s main technical challenge was translating connected historical patient,
-            symptom, diagnosis, and medication information into a structured relational model and
-            usable desktop workflows for storing, retrieving, and reviewing that information.
+            I redesigned the original popup-heavy, debug-style interface as a persistent
+            multi-workspace application shell with clear navigation and integrated patient
+            workflows. Consultation is one four-stage experience—Symptoms, Diagnosis, Prescription,
+            and Review—that keeps patient context and confirmed selections visible. This preserved
+            useful backend behavior while improving the existing application instead of
+            unnecessarily rewriting it.
           </p>
         </section>
 
         <section aria-labelledby="medicheck-data-title">
           <h4 id="medicheck-data-title">Relational data and SQL</h4>
           <p>
-            I worked across the Python application logic, desktop interface, MySQL schema, database
-            connection, sample-data generation, and SQL queries across related records.
+            Patients, visits, symptoms, diagnoses, prescriptions, and medicines are represented as
+            related data. Historical records support SQL-driven symptom, diagnosis, and medicine
+            suggestions through relational associations, aggregation, frequency analysis, and
+            ranking. This is not a trained machine-learning model or medically validated AI.
+          </p>
+        </section>
+
+        <section aria-labelledby="medicheck-reliability-title">
+          <h4 id="medicheck-reliability-title">Reliability and state</h4>
+          <p>
+            Visit completion persists the complete logical case in one database transaction. If
+            persistence fails, the transaction rolls back and consultation state remains available
+            for retry. State clears only after successful completion, and duplicate completion is
+            guarded against. The redesign also strengthened validation and state-lifecycle handling.
           </p>
         </section>
       </div>
+
+      <figure class="medicheck-figure medicheck-figure-consultation">
+        <Image
+          src={mediCheckConsultationImage}
+          alt="MediCheck consultation Symptoms stage showing confirmed selections and related suggestions."
+          width={1113}
+          height={746}
+          sizes="(max-width: 64rem) calc(100vw - 2rem), 60vw"
+          format="png"
+        />
+        <figcaption>
+          <strong>Guided consultation workflow</strong> — A four-stage consultation keeps patient
+          context and confirmed selections visible while historical relational data surfaces related
+          suggestions.
+        </figcaption>
+      </figure>
 
       <a class="action action-primary medicheck-action" href="https://github.com/haneyoshi/MediCheck">
         View MediCheck on GitHub
@@ -281,7 +315,10 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     <div class="skills-grid">
       <article class="skill-evidence">
         <h3>Software development</h3>
-        <p>Python and MySQL were used to develop the MediCheck educational desktop software prototype.</p>
+        <p>
+          Python supports MediCheck’s desktop application logic, workflow redesign, validation, and
+          state lifecycle.
+        </p>
         <p>
           JavaScript, React, and Flask support the EchoTask full-stack MVP, while Astro and
           TypeScript support this portfolio rebuild.
@@ -290,7 +327,10 @@ import mediCheckImage from '../../images/Medi_main_window.png';
 
       <article class="skill-evidence">
         <h3>Data and relational systems</h3>
-        <p>MediCheck demonstrates relational database design and SQL-based information retrieval.</p>
+        <p>
+          MySQL supports MediCheck’s relational visit records, SQL-driven historical suggestions,
+          and transactional persistence.
+        </p>
         <p>EchoTask uses SQLAlchemy and SQLite for relational data modeling and persistence work.</p>
       </article>
 
@@ -867,9 +907,9 @@ import mediCheckImage from '../../images/Medi_main_window.png';
       grid-template-columns: minmax(18rem, 2fr) minmax(0, 3fr);
       grid-template-areas:
         'header header'
-        'summary figure'
-        'details figure'
-        'action figure';
+        'summary dashboard'
+        'details consultation'
+        'action consultation';
       column-gap: var(--space-2xl);
       align-items: start;
     }
@@ -883,10 +923,18 @@ import mediCheckImage from '../../images/Medi_main_window.png';
     }
 
     .medicheck-figure {
-      grid-area: figure;
       width: 100%;
       margin-top: var(--space-xl);
       justify-self: end;
+    }
+
+    .medicheck-figure-dashboard {
+      grid-area: dashboard;
+    }
+
+    .medicheck-figure-consultation {
+      grid-area: consultation;
+      margin-top: var(--space-2xl);
     }
 
     .medicheck-details {
